@@ -123,6 +123,9 @@ export default function Editor() {
   const [loadingSlugs, setLoadingSlugs] = useState<boolean>(false);
   const [isSlugOpen, setIsSlugOpen] = useState<boolean>(false);
   const [slugHighlightIdx, setSlugHighlightIdx] = useState<number>(0);
+  const [availableVersions, setAvailableVersions] = useState<number[]>([]);
+  const [currentVersion, setCurrentVersion] = useState<number>(1);
+  const [loadingVersions, setLoadingVersions] = useState<boolean>(false);
   const slugBoxRef = useRef<HTMLDivElement | null>(null);
 
   const token =
@@ -137,8 +140,44 @@ export default function Editor() {
       const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}`);
       setData(res.data?.data as ContentItem);
       setStatus("Loaded");
+      // Load available versions after loading content
+      await loadAvailableVersions();
     } catch (e: any) {
       setStatus(e?.response?.data?.message || e?.message || "Failed to load");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadAvailableVersions = async () => {
+    if (!section || !slug) return;
+    setLoadingVersions(true);
+    try {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}/versions`);
+      const versions = res.data?.data?.versions || [];
+      setAvailableVersions(versions);
+      if (versions.length > 0) {
+        setCurrentVersion(Math.max(...versions));
+      }
+    } catch (e: any) {
+      console.error("Failed to load versions:", e);
+      setAvailableVersions([]);
+    } finally {
+      setLoadingVersions(false);
+    }
+  };
+
+  const loadVersion = async (version: number) => {
+    if (!section || !slug) return;
+    setStatus(`Loading version ${version}...`);
+    setLoading(true);
+    try {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}/version/${version}`);
+      setData(res.data?.data as ContentItem);
+      setCurrentVersion(version);
+      setStatus(`Loaded version ${version}`);
+    } catch (e: any) {
+      setStatus(e?.response?.data?.message || e?.message || `Failed to load version ${version}`);
     } finally {
       setLoading(false);
     }
@@ -344,20 +383,42 @@ export default function Editor() {
             </div>
           )}
         </div>
-        <button
-          className="bg-fixnix-lightpurple text-white px-3 py-1 rounded"
-          onClick={load}
-          disabled={loading || !slug}
-        >
-          {loading ? <CircularLoader size={16} label="" /> : "Load"}
-        </button>
-        <button
-          className="bg-fixnix-darkpurple text-white px-3 py-1 rounded"
-          onClick={save}
-          disabled={loading || !data}
-        >
-          {loading ? <CircularLoader size={16} label="" /> : "Save"}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={load}
+            disabled={!slug || loading}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+          >
+            {loading ? "Loading..." : "Load"}
+          </button>
+          
+          {/* Version Selector */}
+          {availableVersions.length > 1 && (
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600">Version:</span>
+              <select
+                value={currentVersion}
+                onChange={(e) => loadVersion(parseInt(e.target.value))}
+                disabled={loadingVersions}
+                className="px-3 py-2 border border-gray-300 rounded text-sm"
+              >
+                {availableVersions.map((version) => (
+                  <option key={version} value={version}>
+                    v{version} {version === Math.max(...availableVersions) ? "(Latest)" : ""}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+          
+          <button
+            onClick={save}
+            disabled={!data || loading}
+            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 disabled:opacity-50"
+          >
+            {loading ? "Saving..." : "Save"}
+          </button>
+        </div>
         <button
           className="bg-gray-800 text-white px-3 py-1 rounded"
           onClick={() => {
@@ -1063,6 +1124,37 @@ export default function Editor() {
                     </div>
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      {/* Version History */}
+      {availableVersions.length > 1 && (
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-3">Version History</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {availableVersions.map((version) => (
+              <div
+                key={version}
+                className={`p-3 border rounded-lg cursor-pointer transition-colors ${
+                  currentVersion === version
+                    ? "border-blue-500 bg-blue-50"
+                    : "border-gray-200 hover:border-gray-300"
+                }`}
+                onClick={() => loadVersion(version)}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-medium">Version {version}</span>
+                  {version === Math.max(...availableVersions) && (
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+                      Latest
+                    </span>
+                  )}
+                </div>
+                <div className="text-sm text-gray-600 mt-1">
+                  {currentVersion === version ? "Currently loaded" : "Click to load"}
+                </div>
               </div>
             ))}
           </div>
