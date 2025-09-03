@@ -1,0 +1,80 @@
+{
+  "id": "energeticarchitectures",
+  "section": "explorer",
+  "slug": "energeticarchitectures",
+  "title": "Energetic Architectures",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Building the Framework of Spirit  ",
+          "title": "Exploring the Energy<br/> of Creation",
+          "text": "Energetic architectures reveal the hidden structure of energy behind<br/> existence, guiding seekers toward spiritual balance.  ",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Sacred Structures of Energy ",
+          "title": "Understanding the<br/> Architecture of Spirit",
+          "text": "Through energetic architectures, seekers uncover the patterns of<br/> energy shaping existence and spiritual harmony. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Designing the Spirit’s Blueprint",
+          "title": "Exploring the Sacred <br/>Energy Grid",
+          "text": "Energetic architectures provide seekers with a map to understanding<br/> the spiritual design of existence.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Energy as Divine Structure",
+          "title": "Tapping Into the Power <br/>of Creation ",
+          "text": " Understanding energetic architectures helps seekers align with the<br/> hidden energy frameworks of existence.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "The Sacred Design of Energy",
+          "title": "Awakening Through Energetic<br/> Structures ",
+          "text": "Energetic architectures reveal the spiritual patterns behind existence,<br/> guiding seekers toward deeper truth. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Energetic Architectures",
+      "html": "<p>Energetic Architectures explores the hidden structures that regulate life force, consciousness, and vitality within the human body and beyond. Rooted in Sufi traditions of spiritual physiology and modern bioenergetic sciences, this framework examines how energy circulates, amplifies, and transforms through purification, nutrition, and field harmonization.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this study merges ancient wisdom with scientific inquiry, offering seekers a functional model for enhancing energy flow, optimizing health, and elevating spiritual consciousness.</p>",
+      "image": "/assets/images/resources/architecture.png",
+      "imageAlt": "Energetic Architectures",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Bridging Sufi Energy Sciences & Modern Biophysics" },
+        { "text": "Understanding the Connection Between Energy & Spirituality" },
+        { "text": "Exploring Consciousness Beyond the Brain in Cells" },
+        { "text": "Techniques for Energy Optimization & Spiritual Vitality" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Circulation Systems", "image": "/assets/images/blog/circulation.png", "href": "/details" },
+        { "title": "Force Amplification", "image": "/assets/images/blog/force.png", "href": "/details" },
+        { "title": "Purification Science", "image": "/assets/images/blog/purfication.png", "href": "/details" },
+        { "title": "Spiritual Nutrition", "image": "/assets/images/blog/nutrition.png", "href": "/details" },
+        { "title": "Cellular Consciousness", "image": "/assets/images/blog/cellular.png", "href": "/details" },
+        { "title": "Bioenergetic Fields", "image": "/assets/images/blog/bionenergy.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

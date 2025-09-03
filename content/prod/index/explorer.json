@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "slug": "foundationalmatrices",
+      "title": "Foundational Matrices",
+      "path": "prod/explorer/foundationalmatrices/v1.json"
+    },
+    {
+      "slug": "ecologicalintelligence",
+      "title": "Ecological Intelligence",
+      "path": "prod/explorer/ecologicalintelligence/v1.json"
+    },
+    {
+      "slug": "consciousnessgeometries",
+      "title": "Consciousness Geometries",
+      "path": "prod/explorer/consciousnessgeometries/v1.json"
+    },
+    {
+      "slug": "perceptualgateways",
+      "title": "Perceptual Gateways",
+      "path": "prod/explorer/perceptualgateways/v1.json"
+    },
+    {
+      "slug": "realityframeworks",
+      "title": "Reality Frameworks",
+      "path": "prod/explorer/realityframeworks/v1.json"
+    },
+    {
+      "slug": "cosmicharmonics",
+      "title": "Cosmic Harmonics",
+      "path": "prod/explorer/cosmicharmonics/v1.json"
+    },
+    {
+      "slug": "energeticarchitectures",
+      "title": "Energetic Architectures",
+      "path": "prod/explorer/energeticarchitectures/v1.json"
+    },
+    {
+      "slug": "characteralchemy",
+      "title": "Character Alchemy",
+      "path": "prod/explorer/characteralchemy/v1.json"
+    },
+    {
+      "slug": "unitysciences",
+      "title": "Unity Sciences",
+      "path": "prod/explorer/unitysciences/v1.json"
+    },
+    {
+      "slug": "healingmysteries",
+      "title": "Healing Mysteries",
+      "path": "prod/explorer/healingmysteries/v1.json"
+    },
+    {
+      "slug": "wisdomtransmission",
+      "title": "Wisdom Transmission",
+      "path": "prod/explorer/wisdomtransmission/v1.json"
+    },
+    {
+      "slug": "sacredartistry",
+      "title": "Sacred Artistry",
+      "path": "prod/explorer/sacredartistry/v1.json"
+    },
+    {
+      "slug": "advancedtechnologies",
+      "title": "Advanced Technologies",
+      "path": "prod/explorer/advancedtechnologies/v1.json"
+    }
+  ]
+}

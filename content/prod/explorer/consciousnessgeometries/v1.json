@@ -1,0 +1,80 @@
+{
+  "id": "consciousnessgeometries",
+  "section": "explorer",
+  "slug": "consciousnessgeometries",
+  "title": "Consciousness Geometries",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Sacred Shapes of Awareness",
+          "title": "Mapping the Geometry of Consciousness",
+          "text": "Consciousness geometries reveal the hidden order of mind and <br/>spirit, unlocking deeper dimensions of awareness.  ",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Aligning with Sacred Symmetry",
+          "title": "The Hidden Architecture<br/> of Awareness",
+          "text": "Through sacred geometry, seekers align their consciousness <br/>with the divine order of existence.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Paths of Geometric Awakening",
+          "title": "Understanding the Shape<br/> of Mind",
+          "text": "Consciousness geometries help seekers decode the sacred structures behind <br/>thought, awareness, and spiritual awakening.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Harmonizing the Mind’s Blueprint",
+          "title": "Sacred Geometry of <br/>Consciousness ",
+          "text": "By aligning thought with geometric patterns, seekers unlock deeper states<br/> of clarity, insight, and spiritual harmony.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Unfolding the Patterns of Awareness",
+          "title": "Sacred Codes of Thought<br/> and Spirit ",
+          "text": " Consciousness geometries map the journey toward spiritual awakening,<br/> revealing the hidden patterns of the mind.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Consciousness Geometries",
+      "html": "<p>Consciousness Geometries is an exploration of the structural, spatial, and vibrational nature of awareness. Rooted in Sufi metaphysics and contemporary quantum theories, this framework examines how consciousness interacts with dimensions, time, and non-locality through geometric and field-based models.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this study presents a structured approach to mapping the unseen architectures of consciousness, integrating sacred geometry, quantum mechanics, and multi-dimensional perception to uncover the hidden mechanics of awareness and reality formation.</p>",
+      "image": "/assets/images/resources/geometries.png",
+      "imageAlt": "Consciousness Geometries",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Bridging Quantum Science with Sufi Consciousness Studies" },
+        { "text": " Awareness through Geometric & Multi-Dimensional Models" },
+        { "text": "Exploring Non-Locality, Perception, & Nature of Reality" },
+        { "text": "Developing Practical Applications for Conscious Evolution" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Awareness Cartography", "image": "/assets/images/blog/awareness.png", "href": "/details" },
+        { "title": "Quantum Integration", "image": "/assets/images/blog/quantum.png", "href": "/details" },
+        { "title": "Non-Local Studies", "image": "/assets/images/blog/nonlocal.png", "href": "/details" },
+        { "title": "Dimensional Perception", "image": "/assets/images/blog/dimensional.png", "href": "/details" },
+        { "title": "Temporal Folding", "image": "/assets/images/blog/temporal.png", "href": "/details" },
+        { "title": "Field Navigation", "image": "/assets/images/blog/field.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "sacredprofessions",
+  "section": "academy",
+  "slug": "sacredprofessions",
+  "title": "Sufi Professions",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "DIGITAL ACADEMY",
+          "title":"Sufi Impact on Professions",
+          "text": "Exploring how Sufi principles transform workplace cultures, professional ethics,<br/> and career paths across diverse fields.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "DIGITAL ACADEMY PRESENTS",
+          "title": "Sufi Impact on Professions",
+          "text": "How Sufi principles of service, integrity, and presence are reshaping<br/> leadership across professional domains.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "BEYOND CONVENTIONAL SUCCESS",
+          "title": "Sufi Impact on Professions",
+          "text": "Examining the profound influence of spiritual values on professional<br/> environments, decisions, and outcomes.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "PROFESSION AS SPIRITUAL PATH",
+          "title": "Sufi Impact on Professions",
+          "text": "Understanding how Sufi practitioners elevate their fields through the integration of <br/>spiritual wisdom and technical expertise.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "sectionHeader",
+      "tagline": "Sufi profession ",
+      "title": "Sufi Impact on Professions",
+      "html": "<p class=\"italic\">When work becomes worship, and every role becomes a reflection of the Divine.</p><p>Sufism transforms professions into sacred trusts, where leading, healing, teaching, building, or coding is not just a duty, but a path to presence. Here, every action is remembrance, every service is sanctified, and every profession becomes a prayer in motion.</p>"
+    },
+    {
+      "type": "sidebar",
+      "searchPlaceholder": "Search",
+      "categories": [
+        { "label": "Dialog Series", "href": "/academy/dialogseries" },
+        { "label": "Hard Talk", "href": "/academy/hardtalk" },
+        { "label": "Sacred Professions", "href": "/academy/sacredprofessions", "active": true },
+        { "label": "Inspiring Interviews", "href": "/academy/inspiringinterview" }
+      ]
+    },
+    {
+      "type": "listToolbar",
+      "showingText": "Showing 1–12 results",
+      "sortOptions": ["Sort by popular", "Sort by Ratings"]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title":"The Statesman", "text": "I don’t rule by power,I serve where Divine Justice writes the laws unseen", "image": "/assets/images/professions/1.png", "href": "/professionsdetails" },
+        { "title":"The Administrator", "text": "I govern the unseen, where divine order flows through systems, not just signatures", "image": "/assets/images/professions/2.png", "href": "/professionsdetails" },
+        { "title":"The Court", "text": "I don’t argue cases,I defend truth where voices break, and justice breathes", "image": "/assets/images/professions/3.png", "href": "/professionsdetails" },
+        { "title":"The Businessman", "text": "I walk the marketplace as mosque, every transaction a test, every profit a prayer", "image": "/assets/images/professions/4.png", "href": "/professionsdetails" },
+        { "title":"The Ecologist", "text": "I don’t just heal the earth, I remember it as a living breath of the Divine", "image": "/assets/images/professions/5.png", "href": "/professionsdetails" },
+        { "title":"The Developer", "text": "I don’t build apps, I script realities where Divine Will runs every backend", "image": "/assets/images/professions/6.png", "href": "/professionsdetails" },
+        { "title":"The Witness", "text": "Report with reverence, when truth is sacred, every word becomes a mirror of God", "image": "/assets/images/professions/7.png", "href": "/professionsdetails" },
+        { "title":"The Physician", "text": "My hands touch flesh, my gaze sees spirit. I heal in God’s name", "image": "/assets/images/professions/8.png", "href": "/professionsdetails" },
+        { "title":"The Police Officer", "text": "I wear no badge but conscience, my authority flows from Light, not law alone", "image": "/assets/images/professions/9.png", "href": "/professionsdetails" },
+        { "title":"The Teacher", "text": "My chalk is dhikr, each word drawn to stir the soul’s forgotten script", "image": "/assets/images/professions/10.png", "href": "/professionsdetails" },
+        { "title":"The Student", "text": "I don’t collect knowledge, I empty myself, so Truth may pour in freely", "image": "/assets/images/professions/11.png", "href": "/professionsdetails" },
+        { "title":"The Architect", "text": "I carve the unseen into form, where geometry bows before the Beloved’s rhythm", "image": "/assets/images/professions/12.png", "href": "/professionsdetails" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

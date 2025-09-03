@@ -1,0 +1,80 @@
+{
+  "id": "unitysciences",
+  "section": "explorer",
+  "slug": "unitysciences",
+  "title": "Unity Sciences",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Merging Spirit and Existence",
+          "title": "Exploring the Science<br/> of Oneness",
+          "text": "Unity sciences reveal the sacred connection between all existence,<br/> guiding seekers toward wholeness and harmony.  ",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Paths to Sacred Unity ",
+          "title": "Understanding the Oneness <br/>of Creation ",
+          "text": "Through unity sciences, seekers uncover the hidden bonds connecting all<br/> of existence and spiritual truth. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": " Oneness Through Sacred Knowledge ",
+          "title": " Unlocking the Science<br/> of Unity ",
+          "text": "Unity sciences provide seekers with insight into the interconnectedness<br/> of existence and spiritual harmony.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": " Merging with the Whole ",
+          "title": "Spiritual Truth <br/>Through Unity",
+          "text": "Unity sciences guide seekers toward the realization of<br/> Oneness with creation and spiritual awakening. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Awakening to Universal Connection ",
+          "title": "Discovering the Science<br/> of Unity  ",
+          "text": " By understanding unity sciences, seekers align with <br/>the sacred interconnectedness of existence.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Unity Sciences",
+      "html": "<p>Unity Sciences explores the principles that govern oneness, multiplicity, and divine manifestation. Rooted in Sufi metaphysics, sacred geometry, and advanced ontological studies, this framework analyzes how existence emerges from unity, unfolds into multiplicity, and ultimately returns to its singular source.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this structured study bridges classical mystical thought with contemporary scientific models, revealing the hidden mechanics of unity, separation, and divine manifestation.</p>",
+      "image": "/assets/images/resources/unity.png",
+      "imageAlt": "Unity Sciences",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Bridging Sufi Mysticism & Scientific Inquiry into Oneness" },
+        { "text": "Exploring the Hidden Science of Divine Order & Multiplicity" },
+        { "text": "The Mechanics of Separation & Reunification" },
+        { "text": " Developing Practical Techniques for Unity Consciousness" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Multiplicity Studies", "image": "/assets/images/blog/multiplicity.png", "href": "/details" },
+        { "title": "Oneness Dynamics", "image": "/assets/images/blog/oneness.png", "href": "/details" },
+        { "title": "Names Manifestation", "image": "/assets/images/blog/names.png", "href": "/details" },
+        { "title": "Separation Mechanics", "image": "/assets/images/blog/separation.png", "href": "/details" },
+        { "title": "Unity Technology", "image": "/assets/images/blog/unitytechnology.png", "href": "/details" },
+        { "title": "Divine Expression", "image": "/assets/images/blog/expression.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

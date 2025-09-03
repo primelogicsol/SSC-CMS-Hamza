@@ -1,0 +1,78 @@
+{
+  "id": "inspiringinterview",
+  "section": "academy",
+  "slug": "inspiringinterview",
+  "title": "Inspiring Interviews",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "DIGITAL ACADEMY",
+          "title": "Inspiring Interviews",
+          "text": "Conversations with remarkable individuals who embody spiritual principles<br/> in their everyday lives.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "STORIES OF TRANSFORMATION",
+          "title": "Inspiring Interviews",
+          "text": "Intimate discussions revealing how spiritual practice shapes<br/> personal and professional paths.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "FROM PRINCIPLE TO PRACTICE",
+          "title": "Inspiring Interviews",
+          "text": "Discovering how timeless teachings are applied to <br/>modern challenges through personal stories.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "LIVING TRADITION",
+          "title": "Inspiring Interviews",
+          "text":  "Capturing the knowledge and experiences of notable figures within the spiritual tradition.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "sectionHeader",
+      "tagline": "Inspiring Interviews",
+      "title": "Lived Journeys. Lit Souls. Lasting Echoes.",
+      "html": "<p>In inspiring interviews, you’ll meet individuals whose lives have been radically reshaped by the essence of Sufism. These are not celebrities—they are awakened souls: quiet reformers, radiant artists, silent servers, and bold seekers. Each conversation is a mirror into a life transformed. Some found God in grief. Some turned their professions into paths of light. Others carry centuries-old wisdom into modern chaos.</p>"
+    },
+    {
+      "type": "sidebar",
+      "searchPlaceholder": "Search",
+      "categories": [
+        { "label": "Dialog Series", "href": "/academy/dialogseries" },
+        { "label": "Hard Talk", "href": "/academy/hardtalk" },
+        { "label": "Sacred Professions", "href": "/academy/sacredprofessions" },
+        { "label": "Inspiring Interviews", "href": "/academy/inspiringinterview", "active": true }
+      ]
+    },
+    {
+      "type": "listToolbar",
+      "showingText": "Showing 1–9 results",
+      "sortOptions": ["Sort by popular", "Sort by Ratings"]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title":"Dusk became divine", "text": "The Awakening of Carter Nooruddin, Once a Wall Climber", "image": "/assets/images/interview/1.png", "href": "/interviewdetails" },
+        { "title":"Feather touched fire", "text": "Layla Sabreen's journey from dance to divine surrender ", "image": "/assets/images/interview/2.png", "href": "/interviewdetails" },
+        { "title":"Silence led me Home", "text": "Malik Jennings silent breakdown that became prayer", "image": "/assets/images/interview/3.png", "href": "/interviewdetails" },
+        { "title":"Name turned light", "text": "How Fatime Delgado walked away from titles and toward truth", "image": "/assets/images/interview/4.png", "href": "/interviewdetails" },
+        { "title":"Unseen, Yet so Near", "text": "Rashid Green healing after loss opened a secret door", "image": "/assets/images/interview/5.png", "href": "/interviewdetails" },
+        { "title":"He found me disappearing", "text": "Iman Rivera moment of surrender in the forests of oregon", "image": "/assets/images/interview/6.png", "href": "/interviewdetails" },
+        { "title":"Veils fell, Light spoke", "text": "Zayn Taylor sudden clarity in a seattle bookstore", "image": "/assets/images/interview/7.png", "href": "/interviewdetails" },
+        { "title":"The path wrote me", "text": "Maryam Hall stopped planning and started listening", "image": "/assets/images/interview/8.png", "href": "/interviewdetails" },
+        { "title":"Breath from rhythm", "text": "Jasmine Rahma learns that dhikr lives in science", "image": "/assets/images/interview/9.png", "href": "/interviewdetails" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

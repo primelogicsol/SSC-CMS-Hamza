@@ -1,0 +1,70 @@
+{
+  "id": "academy-sample-all-blocks",
+  "section": "academy",
+  "slug": "academy-sample-all-blocks",
+  "title": "Academy Sample (All Blocks)",
+  "subtitle": "Demo content for Academy section",
+  "heroImage": "https://example.com/placeholder.jpg",
+  "seo": {
+    "title": "Academy Sample",
+    "description": "Demo academy content for bulk upload",
+    "keywords": ["academy", "sample", "demo"]
+  },
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Welcome to Academy",
+          "title": "Learn, Explore,<br/> Transform",
+          "text": "This is a demo hero slide for academy",
+          "buttonText": "Explore",
+          "buttonLink": "/"
+        },
+        {
+          "subTitle": "Second Slide",
+          "title": "Knowledge that Inspires",
+          "text": "Another demo slide",
+          "buttonText": "Learn More",
+          "buttonLink": "/"
+        }
+      ]
+    },
+    {
+      "type": "sectionHeader",
+      "tagline": "Getting Started",
+      "title": "What you'll find",
+      "html": "<p>This is a demo section header with HTML.</p>"
+    },
+    {
+      "type": "sidebar",
+      "searchPlaceholder": "Search topics",
+      "categories": [
+        { "label": "All", "href": "#", "active": true },
+        { "label": "Featured", "href": "#" },
+        { "label": "Latest", "href": "#" }
+      ]
+    },
+    {
+      "type": "listToolbar",
+      "showingText": "Showing demo items",
+      "sortOptions": ["Sort by popular", "Sort by ratings", "Newest"]
+    },
+    {
+      "type": "richText",
+      "html": "<p>Rich text content for academy sample. <strong>Bold</strong> and <em>italic</em>.</p>"
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Card One", "text": "Short description", "image": "/assets/images/resources/logo.png", "href": "#" },
+        { "title": "Card Two", "text": "Short description", "image": "/assets/images/resources/logo-1.png", "href": "#" },
+        { "title": "Card Three", "text": "Short description", "image": "/assets/images/resources/logo-2.png", "href": "#" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-06-01T00:00:00.000Z"
+}
+
+

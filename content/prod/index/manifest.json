@@ -1,0 +1,12 @@
+{
+  "sections": [
+    "explorer",
+    "academy"
+  ],
+  "indexes": {
+    "explorer": "prod/index/explorer.json",
+    "academy": "prod/index/academy.json"
+  }
+}
+
+

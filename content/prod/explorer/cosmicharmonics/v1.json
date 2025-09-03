@@ -1,0 +1,80 @@
+{
+  "id": "cosmicharmonics",
+  "section": "explorer",
+  "slug": "cosmicharmonics",
+  "title": "Cosmic Harmonics",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Aligning with the Music of the Spheres",
+          "title": "Discovering the<br/> Harmony of Existence ",
+          "text": "Cosmic harmonics reveal the sacred vibrations of existence,<br/> guiding seekers toward unity with the universe.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Vibration of the Divine ",
+          "title": "Tuning into Cosmic<br/> Frequencies ",
+          "text": "Through cosmic harmonics, seekers align their spirit with the sacred<br/> vibrations of the universe and divine order. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Sacred Rhythms of the Cosmos",
+          "title": "Finding Unity <br/>Through Vibration ",
+          "text": "Cosmic harmonics reveal the hidden order of existence, <br/>guiding seekers to resonate with universal truth.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "The Sound of Creation",
+          "title": " Tuning into the<br/> Universe’s Pulse",
+          "text": "By understanding cosmic harmonics, seekers discover the <br/>sacred soundscape of existence and spiritual awakening.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": " Resonating with Universal Truth",
+          "title": "Awakening Through Cosmic<br/> Vibration ",
+          "text": "Cosmic harmonics help seekers connect with the sacred rhythms of the universe,<br/> finding harmony and enlightenment.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Cosmic Harmonics",
+      "html": "<p>Cosmic Harmonics explores the universal rhythms, celestial patterns, and vibrational structures that shape existence. Rooted in Sufi wisdom and advanced scientific inquiry, this framework examines how the cosmos functions as a divine symphony, where light, sound, and resonance govern creation, consciousness, and reality itself.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this structured study reveals the hidden frequencies that align matter, energy, and consciousness, offering seekers a scientific and spiritual roadmap to navigating cosmic harmony.</p>",
+      "image": "/assets/images/resources/cosmic.png",
+      "imageAlt": "Cosmic Harmonics",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": " Bridging Science & Astrophysical Exploration" },
+        { "text": "  Understanding the Vibrational Nature of Reality" },
+        { "text": "Aligning Human Consciousness with Universal Harmonics" },
+        { "text": "Exploring How Light, Sound & Time Shape Spiritual Evolution" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Celestial Navigation", "image": "/assets/images/blog/celestrial.png", "href": "/details" },
+        { "title": "Sacred Time", "image": "/assets/images/blog/time.png", "href": "/details" },
+        { "title": "Quantum Entanglement", "image": "/assets/images/blog/entanglement.png", "href": "/details" },
+        { "title": "Divine Light", "image": "/assets/images/blog/light.png", "href": "/details" },
+        { "title": "Vibrational Cosmology", "image": "/assets/images/blog/vibration.png", "href": "/details" },
+        { "title": "Stellar Wisdom", "image": "/assets/images/blog/stellar.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

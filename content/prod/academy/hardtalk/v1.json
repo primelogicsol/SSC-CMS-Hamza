@@ -1,0 +1,76 @@
+{
+  "id": "hardtalk",
+  "section": "academy",
+  "slug": "hardtalk",
+  "title": "Hard Talk",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle":  "DIGITAL ACADEMY",
+          "title": "Hard Talk Series",
+          "text": "Confronting difficult questions with intellectual honesty,<br/> spiritual insight, and respectful dialogue.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "BEYOND COMFORTABLE ANSWERS",
+          "title": "Hard Talk Series",
+          "text": "Engaging with challenging topics that require both<br/> intellectual rigor and spiritual wisdom.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "DIGITAL ACADEMY PRESENTS",
+          "title": "Hard Talk Series",
+          "text": "Where difficult questions meet deep knowledge, <br/>creating space for authentic spiritual inquiry.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "SEEKING CLARITY",
+          "title": "Hard Talk Series",
+          "text": "Conversations that move beyond simplistic answers to <br/>embrace the complexity of spiritual truth.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "richText",
+      "html": "<p>Dive deep into the boldest confrontation between tradition and reality. The HARD TALK series courageously exposes what many dare not utter, challenging revered Sufi masters with profoundly provocative accusations. Here, spirituality is tested against harsh truths, truths that question the intentions behind practices, confront the comfort zones of mystics, and expose contradictions in faith and action. Each session peels away superficial layers, inviting intense self-reflection and honesty, shattering illusions and igniting authentic transformation.</p><p>Are you prepared to face the raw, unapologetic conversations that redefine spiritual integrity? Step forward into HARD TALK, where answers aren't comfortable, but they're undeniably necessary.</p>"
+    },
+    {
+      "type": "sidebar",
+      "searchPlaceholder": "Search",
+      "categories": [
+        { "label": "Dialog Series", "href": "/academy/dialogseries" },
+        { "label": "Hard Talk", "href": "/academy/hardtalk", "active": true },
+        { "label": "Sacred Professions", "href": "/academy/sacredprofessions" },
+        { "label": "Inspiring Interviews", "href": "/academy/inspiringinterview" }
+      ]
+    },
+    {
+      "type": "listToolbar",
+      "showingText": "Showing 1–9 results",
+      "sortOptions": ["Sort by popular", "Sort by Ratings"]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Hard Talk 1", "text": "\"This path bleeds, ask those who vanished in fire, not those who watched dancing\"", "image": "/assets/images/hardtalk/9.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 2", "text": "\"We carry their light, not as merchants, but as mirrors of divine trust.\"", "image": "/assets/images/hardtalk/10.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 3", "text": "\"Sharia was my sword Mysticism, my surrender. I vanished where both became One.\"", "image": "/assets/images/hardtalk/11.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 4", "text": "\"If they truly saw me, they’d see only the dust beneath His feet\"", "image": "/assets/images/hardtalk/12.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 5", "text": "\"Why preach Hell when I’ve walked through it just to light another’s path?\"", "image": "/assets/images/hardtalk/13.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 6", "text": "\"I surrendered every term what remains is what God wanted through my nothingness.\"", "image": "/assets/images/hardtalk/14.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 7", "text": "\"You see bricks, I see light. My mosque is within, always facing Him\"", "image": "/assets/images/hardtalk/15.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 8", "text": "\"Rumi is Qur’an unveiled his words bleed revelation, and I bleed with him\"", "image": "/assets/images/hardtalk/16.png", "href": "/hardtalkdetails" },
+        { "title": "Hard Talk 9", "text": "\"I wage the greatest Jihad—where no blood spills, but the ego dies screaming\"", "image": "/assets/images/hardtalk/17.png", "href": "/hardtalkdetails" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

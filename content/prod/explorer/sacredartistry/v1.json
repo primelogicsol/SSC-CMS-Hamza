@@ -1,0 +1,80 @@
+{
+  "id": "sacredartistry",
+  "section": "explorer",
+  "slug": "sacredartistry",
+  "title": "Sacred Artistry",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Crafting the Divine Expression",
+          "title": "Art as a Sacred Path ",
+          "text": "Sacred artistry reveals the spiritual power of creative expression,<br/> guiding seekers toward divine truth. ",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Creativity as Spiritual Devotion ",
+          "title": "Expressing the Sacred<br/> Through Art  ",
+          "text": " Sacred artistry reflects the divine order, helping seekers align <br/>with higher truth through creativity.   ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "The Divine in Creative Form  ",
+          "title": "Unlocking the Power<br/> of Sacred Art",
+          "text": "Sacred artistry provides seekers with a path to<br/> spiritual truth through creative expression.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": " Spiritual Truth Through Creativity ",
+          "title": "Crafting the Divine ",
+          "text": "Sacred artistry allows seekers to express spiritual truth and<br/> align with divine creativity.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Creativity as a Sacred Act  ",
+          "title": "Discovering the Power <br/>of Art  ",
+          "text": " Through sacred artistry, seekers connect with<br/> divine truth and spiritual expression.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Sacred Artistry",
+      "html": "<p>Sacred Artistry explores the spiritual dimensions of creative expression, where art serves as a vessel for divine harmony, metaphysical insight, and transcendent beauty. Rooted in Sufi aesthetics, geometry, and sound sciences, this framework examines how art becomes a bridge between the seen and unseen, a channel for wisdom, and a medium for spiritual refinement.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this study merges artistic mastery with sacred intention, offering seekers a structured understanding of how geometry, movement, sound, and symbolic representation convey divine realities.</p>",
+      "image": "/assets/images/resources/sacred.png",
+      "imageAlt": "Sacred Artistry",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Bridging Sufi Aesthetics with Metaphysical Science" },
+        { "text": "Understanding the Art in Transmission & Transformation" },
+        { "text": "Exploring the Vibrational Effects of Sacred Design" },
+        { "text": "Developing Art as a Tool for Divine Connection " }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Geometric Harmonics", "image": "/assets/images/blog/geometric.png", "href": "/details" },
+        { "title": "Illuminated Calligraphy", "image": "/assets/images/blog/calligraphy.png", "href": "/details" },
+        { "title": "Movement Practices", "image": "/assets/images/blog/movement.png", "href": "/details" },
+        { "title": "Wisdom Poetry", "image": "/assets/images/blog/poetry.png", "href": "/details" },
+        { "title": "Acoustical Engineering", "image": "/assets/images/blog/acoustics.png", "href": "/details" },
+        { "title": "Symbolic Expression", "image": "/assets/images/blog/symbolic.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

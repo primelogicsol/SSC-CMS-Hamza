@@ -1,0 +1,73 @@
+{
+  "id": "explorer-sample-all-blocks-2",
+  "section": "explorer",
+  "slug": "explorer-sample-all-blocks-2",
+  "title": "Explorer Sample 2 (All Blocks)",
+  "subtitle": "Second demo for Explorer",
+  "seo": {
+    "title": "Explorer Sample 2",
+    "description": "Another explorer demo with all blocks",
+    "keywords": ["explorer", "sample", "demo", "second"]
+  },
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Slide One",
+          "title": "Inquire &<br/> Imagine",
+          "text": "First slide for explorer sample 2.",
+          "buttonText": "Learn",
+          "buttonLink": "/"
+        },
+        {
+          "subTitle": "Slide Two",
+          "title": "Connect the Dots",
+          "text": "Second slide for explorer sample 2.",
+          "buttonText": "Read",
+          "buttonLink": "/"
+        }
+      ]
+    },
+    {
+      "type": "sectionHeader",
+      "tagline": "Highlights",
+      "title": "Why explore?",
+      "html": "<p>Highlights of this sample content.</p>"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Simple structure" },
+        { "text": "Rich visuals" },
+        { "text": "Reusable blocks" }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Visual Focus",
+      "html": "<p>A strong visual section paired with explanatory text.</p>",
+      "image": "/assets/images/resources/footer-logo.png",
+      "imageAlt": "Another demo image",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "left"
+    },
+    {
+      "type": "richText",
+      "html": "<p>Additional context with <em>emphasis</em> and details.</p>"
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Module One", "text": "Summary", "image": "/assets/images/resources/logo-3.png", "href": "#" },
+        { "title": "Module Two", "text": "Summary", "image": "/assets/images/resources/logo-2.png", "href": "#" },
+        { "title": "Module Three", "text": "Summary", "image": "/assets/images/resources/logo-1.png", "href": "#" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-06-01T00:00:00.000Z"
+}
+
+

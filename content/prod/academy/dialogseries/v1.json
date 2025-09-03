@@ -1,0 +1,96 @@
+{
+  "id": "dialogseries",
+  "section": "academy",
+  "slug": "dialogseries",
+  "title": "Dialog Series",
+  "seo": { "title": "Dialog Series" },
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "DIGITAL ACADEMY",
+          "title": "Dialog Series",
+          "text": "Engaging discussions that explore spiritual wisdom through<br/> diverse perspectives and thoughtful exchange.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "WISDOM THROUGH CONVERSATION",
+          "title":  "Dialog Series",
+          "text":"Join respected scholars and practitioners in conversations<br/> that illuminate complex spiritual concepts.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "DIGITAL ACADEMY PRESENTS",
+          "title": "Dialog Series",
+          "text": "Explore the richness of spiritual tradition through structured conversations<br/> that welcome all perspectives.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "QUESTIONS & INSIGHTS",
+          "title": "Dialog Series",
+          "text": "Thoughtful discussions that navigate the depths of spiritual knowledge<br/> with clarity and authenticity.",
+          "buttonText": "Explore",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "sectionHeader",
+      "tagline": "Dialog Series",
+      "title": "Where Truth Faces Challenge and Wisdom Meets Courage",
+      "html": "Step into a realm where conventional beliefs about Sufism are tested through groundbreaking, bold conversations."
+    },
+    {
+      "type": "sidebar",
+      "searchPlaceholder": "Search",
+      "categories": [
+        {
+          "label": "Dialog Series",
+          "href": "/academy/dialogseries",
+          "active": true
+        },
+        { "label": "Hard Talk", "href": "/academy/hardtalk" },
+        { "label": "Sufi Professions", "href": "/academy/sacredprofessions" },
+        {
+          "label": "Inspiring Interviews",
+          "href": "/academy/inspiringinterview"
+        }
+      ]
+    },
+    {
+      "type": "listToolbar",
+      "showingText": "Showing 1–3 results",
+      "sortOptions": ["Sort by popular", "Sort by Ratings"]
+    },
+    {
+      "type": "richText",
+      "html": "<p>Step into a realm where conventional beliefs about Sufism are tested through groundbreaking, bold conversations. In this extraordinary series, the curious seeker boldly confronts the seasoned master, the skeptic fearlessly challenges sacred doctrines, and the experienced scholar dares to question established truths. Each dialog peels back layers of tradition, exploring the core of spiritual authenticity with unmatched depth and sincerity. Prepare yourself for a transformative encounter, one that not only questions but illuminates, awakening your inner journey toward profound enlightenment.</p>"
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        {
+          "title": "The Curious Seeker",
+          "image": "/assets/images/dialogs/9.png",
+          "href": "/dialogsdetails"
+        },
+        {
+          "title": "The Sufism Challenger",
+          "image": "/assets/images/dialogs/10.png",
+          "href": "/dialogsdetails"
+        },
+        {
+          "title": "The Sufi Scholar",
+          "image": "/assets/images/dialogs/11.png",
+          "href": "/dialogsdetails"
+        }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

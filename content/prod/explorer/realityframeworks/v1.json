@@ -1,0 +1,80 @@
+{
+  "id": "realityframeworks",
+  "section": "explorer",
+  "slug": "realityframeworks",
+  "title": "Reality Frameworks",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Building the Foundations of Truth ",
+          "title": "Exploring the Structure<br/> of Reality ",
+          "text": "Reality frameworks reveal the hidden design behind existence,<br/> helping seekers align with spiritual order.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Sacred Frameworks of Existence ",
+          "title": "Mapping the Truth of Reality ",
+          "text": "Reality frameworks offer seekers a guide to understanding the<br/> hidden structure of the universe and existence.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Unlocking the Codes of Reality ",
+          "title": "The Blueprint of<br/> Existence ",
+          "text": "By exploring reality frameworks, seekers uncover the hidden laws<br/> guiding existence and spiritual balance.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Discovering the Architecture of Being",
+          "title": "Reality’s Sacred Blueprint",
+          "text": "Reality frameworks provide the map to understanding existence,<br/> guiding seekers to align with cosmic truth.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Truth in the Structure of Life ",
+          "title": "Decoding the <br/>Sacred Framework",
+          "text": "Reality frameworks reveal the hidden structure of existence,<br/> allowing seekers to align with divine order.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Reality Frameworks",
+      "html": "<p>Reality Frameworks is a deep exploration into the hidden structures governing existence, blending classical Sufi metaphysics with modern scientific paradigms. This framework examines how reality is shaped, perceived, and influenced through the interplay of quantum mechanics, holographic principles, and multidimensional fields.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this structured study bridges spiritual wisdom with frontier sciences, offering seekers a comprehensive understanding of reality as a dynamic, interconnected system.</p>",
+      "image": "/assets/images/resources/reality.png",
+      "imageAlt": "Reality Frameworks",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": " Bridging Advanced Science with Sufi Thought" },
+        { "text": "  Exploring the Mechanics of Perception & Reality" },
+        { "text": "The Role of Energy, Information & Consciousness" },
+        { "text": "Providing a Practical Framework for Higher Awareness" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Quantum Dynamics", "image": "/assets/images/blog/quantumdynamics.png", "href": "/details" },
+        { "title": "Holographic Science", "image": "/assets/images/blog/holographic.png", "href": "/details" },
+        { "title": "Multiversal Exploration", "image": "/assets/images/blog/multiversal.png", "href": "/details" },
+        { "title": "Information Mysticism", "image": "/assets/images/blog/information.png", "href": "/details" },
+        { "title": "Electromagnetic Spirituality", "image": "/assets/images/blog/electromagnetic.png", "href": "/details" },
+        { "title": "Gravitational Mysteries", "image": "/assets/images/blog/gravity.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

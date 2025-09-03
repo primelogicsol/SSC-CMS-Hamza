@@ -1,0 +1,66 @@
+{
+  "id": "explorer-sample-all-blocks-1",
+  "section": "explorer",
+  "slug": "explorer-sample-all-blocks-1",
+  "title": "Explorer Sample 1 (All Blocks)",
+  "subtitle": "Demo content for Explorer",
+  "seo": {
+    "title": "Explorer Sample 1",
+    "description": "Demo explorer content for bulk upload",
+    "keywords": ["explorer", "sample", "demo"]
+  },
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Discover the Unknown",
+          "title": "Explore Ideas<br/> That Matter",
+          "text": "This is a demo hero slide for explorer.",
+          "buttonText": "Start",
+          "buttonLink": "/"
+        }
+      ]
+    },
+    {
+      "type": "sectionHeader",
+      "tagline": "Overview",
+      "title": "What is inside",
+      "html": "<p>Explorer sample with all supported blocks.</p>"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Feature A" },
+        { "text": "Feature B" },
+        { "text": "Feature C" }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Deep Dive",
+      "html": "<p>Explain a concept using image + text.</p>",
+      "image": "/assets/images/resources/logo-3.png",
+      "imageAlt": "Demo image",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "richText",
+      "html": "<p>Rich text for explorer sample. Include <strong>formatting</strong> as needed.</p>"
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Topic Alpha", "text": "Brief", "image": "/assets/images/resources/logo.png", "href": "#" },
+        { "title": "Topic Beta", "text": "Brief", "image": "/assets/images/resources/logo-1.png", "href": "#" },
+        { "title": "Topic Gamma", "text": "Brief", "image": "/assets/images/resources/logo-2.png", "href": "#" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-06-01T00:00:00.000Z"
+}
+
+

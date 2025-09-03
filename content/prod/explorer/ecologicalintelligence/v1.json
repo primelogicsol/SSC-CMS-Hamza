@@ -1,0 +1,106 @@
+{
+  "id": "ecologicalintelligence",
+  "section": "explorer",
+  "slug": "ecologicalintelligence",
+  "title": "Ecological Intelligence",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Wisdom of the Natural World",
+          "title": "Aligning with <br/>Nature’s Harmony",
+          "text": "Ecological intelligence reveals the sacred balance<br/> between humanity and nature, promoting spiritual and environmental harmony.  ",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Sacred Ecology Unfolded",
+          "title": "Finding Spiritual Truth <br/>in Nature ",
+          "text": " Understanding the sacred patterns of nature helps seekers find <br/>harmony, peace, and a deeper connection with creation.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Living in Sacred Balance",
+          "title": "Nature’s Wisdom and<br/> Spiritual Growth ",
+          "text": "Ecological intelligence teaches how to live in harmony with<br/> the earth, guided by spiritual balance and natural rhythms.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Nature as a Spiritual Teacher",
+          "title": " Learning from the Language<br/> of Nature",
+          "text": "Nature’s design mirrors spiritual truths, guiding seekers to live<br/> in harmony with the rhythms of existence.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Awakening Through Nature’s Wisdom ",
+          "title": "Sacred Balance of<br/> Life and Spirit ",
+          "text": "By aligning with ecological intelligence, seekers unlock the<br/> hidden spiritual codes embedded in the natural world.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Ecological Intelligence",
+      "html": "<p>Ecological Intelligence is the sacred science of living in harmony with creation, integrating spiritual consciousness, environmental ethics, and divine stewardship.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this study presents a structured approach to understanding ecology as a spiritual discipline.</p>",
+      "image": "/assets/images/resources/intelligence.png",
+      "imageAlt": "Ecological Intelligence",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Bridging Environmental Science with Spiritual Wisdom" },
+        { "text": " Exploring Divine Patterns within Natural Systems" },
+        { "text": " Developing Ethical & Sustainable Approaches to Ecology" },
+        {
+          "text": " Fostering Awareness of Humanity’s Role in Creation Stewardship"
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        {
+          "title": "Sacred Ecology",
+          "image": "/assets/images/blog/ecology.png",
+          "href": "/details"
+        },
+        {
+          "title": "Divine Balance",
+          "image": "/assets/images/blog/balance.png",
+          "href": "/details"
+        },
+        {
+          "title": "Creation Stewardship",
+          "image": "/assets/images/blog/stewardship.png",
+          "href": "/details"
+        },
+        {
+          "title": "Natural Communication",
+          "image": "/assets/images/blog/communication.png",
+          "href": "/details"
+        },
+        {
+          "title": "Ecosystem Mapping",
+          "image": "/assets/images/blog/mapping.png",
+          "href": "/details"
+        },
+        {
+          "title": "Earth Resonance",
+          "image": "/assets/images/blog/resonance.png",
+          "href": "/details"
+        }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

@@ -1,0 +1,112 @@
+{
+  "id": "advancedtechnologies",
+  "section": "explorer",
+  "slug": "advancedtechnologies",
+  "title": "Advanced Technologies",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Merging Spirit with Innovation ",
+          "title": " Unlocking the Sacred Power<br/> of Technology",
+          "text": "Advanced technologies bridge the gap between spiritual wisdom and modern innovation, <br/>guiding seekers toward enlightenment.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Technology as a Path to Awakening ",
+          "title": "Harnessing Modern Tools for<br/> Spiritual Growth",
+          "text": "Through advanced technologies, seekers gain new insights into ancient<br/> spiritual truths and universal order.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Innovation in Service of Spirit ",
+          "title": "Aligning Modern Tools with Spiritual Wisdom ",
+          "text": "Advanced technologies provide seekers with the means to explore spiritual truth through modern innovation.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Tech Meets Transcendence ",
+          "title": "Modern Solutions for<br/> Eternal Questions",
+          "text": "By integrating advanced technologies, seekers uncover deeper<br/> spiritual insights and universal harmony.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Tools for Spiritual Evolution ",
+          "title": "Expanding Consciousness<br/> Through Innovation   ",
+          "text": "Advanced technologies empower seekers to explore spiritual <br/>dimensions and unlock hidden truths ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Advanced Technologies",
+      "html": "<p>Advanced Technologies explores the frontiers of energy systems, vibrational science, and the deeper physics governing reality, merging Sufi metaphysical insights with cutting-edge scientific thought. This framework investigates the structure of energy, the properties of matter, and the technologies embedded within consciousness and natural law that facilitate activation, resonance, and transformation.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this structured study merges classical wisdom with emerging paradigms, offering seekers a functional understanding of luminous energy systems, high-frequency states, and the mechanics of transcending barriers within physical and metaphysical domains.</p>",
+      "image": "/assets/images/resources/technology.png",
+      "imageAlt": "Advanced Technologies",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        {
+          "text": "Bridging Sufi Mysticism with Quantum Physics & Energy Science"
+        },
+        {
+          "text": "Exploring the Hidden Technologies of Consciousness & Creation"
+        },
+        {
+          "text": "Understanding the Mechanics of Energy, Resonance & Light Activation"
+        },
+        {
+          "text": "Developing Functional Tools for Self-Realization & Transcendence"
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        {
+          "title": "Energy Systems",
+          "image": "/assets/images/blog/energy.png",
+          "href": "/details"
+        },
+        {
+          "title": "Luminous Activation",
+          "image": "/assets/images/blog/luminous.png",
+          "href": "/details"
+        },
+        {
+          "title": "Energy Crystallography",
+          "image": "/assets/images/blog/crystallography.png",
+          "href": "/details"
+        },
+        {
+          "title": "Vibrational Science",
+          "image": "/assets/images/blog/vibrational.png",
+          "href": "/details"
+        },
+        {
+          "title": "Particle Physics",
+          "image": "/assets/images/blog/particle.png",
+          "href": "/details"
+        },
+        {
+          "title": "Symmetry Patterning",
+          "image": "/assets/images/blog/symmetry.png",
+          "href": "/details"
+        }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

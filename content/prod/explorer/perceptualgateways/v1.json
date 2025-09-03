@@ -1,0 +1,80 @@
+{
+  "id": "perceptualgateways",
+  "section": "explorer",
+  "slug": "perceptualgateways",
+  "title": "Perceptual Gateways",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Doors to Higher Awareness ",
+          "title": "Opening the Gates<br/> of Perception ",
+          "text": "Perceptual gateways offer seekers access to hidden dimensions of truth,<br/> awareness, and spiritual insight.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Awakening Through Sacred Portals",
+          "title": "Discovering the Path to<br/> Inner Visiont",
+          "text": "Perceptual gateways expand awareness, connecting seekers to spiritual<br/> truth and higher dimensions of consciousness.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Unlocking Inner Sight ",
+          "title": "The Path to <br/>Spiritual Perception",
+          "text": "Perceptual gateways reveal hidden dimensions of existence, <br/>helping seekers find clarity and deeper understanding.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Keys to Mystical Vision",
+          "title": "Discovering the Power<br/> of Perception",
+          "text": "By unlocking perceptual gateways, seekers expand their spiritual<br/> awareness and connect to higher truths.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Portals to Spiritual Awareness",
+          "title": "Opening the Mind’s <br />Hidden Doors",
+          "text": " Perceptual gateways allow seekers to transcend physical limitations<br/> and access higher realms of consciousness. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Perceptual Gateways",
+      "html": "<p>Perceptual Gateways explores the expanded dimensions of human perception, transcending the limitations of the physical senses to access higher awareness and spiritual cognition. Rooted in Sufi teachings on the refinement of perception, this framework maps the subtle faculties through which one experiences inner reality, divine communication, and sacred resonance.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this study provides a structured approach to awakening latent senses, training seekers to refine perception, deepen spiritual sensitivity, and attune to divine frequencies.</p>",
+      "image": "/assets/images/resources/gateways.png",
+      "imageAlt": "Perceptual Gateways",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Activating Higher Sensory Awareness for Growth"  },
+        { "text": " Developing Inner Perception & Metaphysical Senses"  },
+        { "text": "Physical Sensory Experience with Spiritual Dimensions" },
+        { "text": " Enhancing the Understanding of Sufi Mystical Phenomena"}
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Subtle Development", "image": "/assets/images/blog/subtle.png", "href": "/details" },
+        { "title": "Inner Sight", "image": "/assets/images/blog/sight.png", "href": "/details" },
+        { "title": "Spiritual Hearing", "image": "/assets/images/blog/hearing.png", "href": "/details" },
+        { "title": "Divine Taste", "image": "/assets/images/blog/taste.png", "href": "/details" },
+        { "title": "Sacred Touch", "image": "/assets/images/blog/touch.png", "href": "/details" },
+        { "title": "Transcendent Smell", "image": "/assets/images/blog/smell.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

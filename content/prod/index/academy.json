@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "slug": "dialogseries",
+      "title": "Dialog Series",
+      "path": "prod/academy/dialogseries/v1.json"
+    },
+    {
+      "slug": "hardtalk",
+      "title": "Hard Talk",
+      "path": "prod/academy/hardtalk/v1.json"
+    },
+    {
+      "slug": "sacredprofessions",
+      "title": "Sufi Professions",
+      "path": "prod/academy/sacredprofessions/v1.json"
+    },
+    {
+      "slug": "inspiringinterview",
+      "title": "Inspiring Interviews",
+      "path": "prod/academy/inspiringinterview/v1.json"
+    }
+  ]
+}

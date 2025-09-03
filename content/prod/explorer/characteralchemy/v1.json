@@ -1,0 +1,106 @@
+{
+  "id": "characteralchemy",
+  "section": "explorer",
+  "slug": "characteralchemy",
+  "title": "Character Alchemy",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Refining the Spirit Within",
+          "title": "Transforming Through<br/> Inner Alchemy ",
+          "text": "Character alchemy helps seekers purify and transform their inner being,<br/> revealing their divine essence.",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Becoming the Higher Self",
+          "title": "Spiritual Transformation <br/>Through Alchemy",
+          "text": "Character alchemy guides seekers through inner change, <br/>refining the soul and awakening divine potential.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Purification of the Soul",
+          "title": "Unlocking the Power <br/>of Alchemy",
+          "text": "By practicing character alchemy, seekers transform their <br/>inner being and awaken to spiritual truth.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Rebirth Through Inner Change",
+          "title": "The Sacred Art of <br/>Character Alchemy",
+          "text": "Through character alchemy, seekers refine their inner nature,<br/> aligning with higher spiritual truths.",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Spiritual Refinement Unveiled ",
+          "title": "The Path of<br/> Inner Alchemy  ",
+          "text": " Character alchemy helps seekers dissolve the ego and<br/> awaken the hidden divinity within.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Character Alchemy",
+      "html": "<p>Character Alchemy is the science of inner transformation, refining the raw materials of the self into higher states of virtue, wisdom, and divine embodiment. Rooted in Sufi ethical philosophy and advanced spiritual psychology, this framework merges inner refinement with sacred engineering, guiding seekers through the systematic process of spiritual self-mastery</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this study presents a structured path for developing transcendent ethics, cultivating virtue, and embodying divine justice in action.</p>",
+      "image": "/assets/images/resources/alchemy.png",
+      "imageAlt": "Character Alchemy",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Bridging Classical Sufi Ethics with Character Development" },
+        { "text": "Providing a Systematic Approach to Spiritual Refinement" },
+        { "text": "Understanding the Science Behind Virtue & Consciousness" },
+        {
+          "text": "Developing Actionable Strategies for Living an Aligned, Ethical Life"
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        {
+          "title": "Transcendent Ethics",
+          "image": "/assets/images/blog/ethics.png",
+          "href": "/details"
+        },
+        {
+          "title": "Divine Engineering",
+          "image": "/assets/images/blog/engineering.png",
+          "href": "/details"
+        },
+        {
+          "title": "Sacred Embodiment",
+          "image": "/assets/images/blog/embodiment.png",
+          "href": "/details"
+        },
+        {
+          "title": "Virtue Cultivation",
+          "image": "/assets/images/blog/virtue.png",
+          "href": "/details"
+        },
+        {
+          "title": "Justice Mechanics",
+          "image": "/assets/images/blog/justice.png",
+          "href": "/details"
+        },
+        {
+          "title": "Compassionate Action",
+          "image": "/assets/images/blog/compassion.png",
+          "href": "/details"
+        }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

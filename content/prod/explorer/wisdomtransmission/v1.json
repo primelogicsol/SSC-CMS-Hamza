@@ -1,0 +1,80 @@
+{
+  "id": "wisdomtransmission",
+  "section": "explorer",
+  "slug": "wisdomtransmission",
+  "title": "Wisdom Transmission",
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Passing the Flame of Truth",
+          "title": "Unfolding the <br/>Sacred Teachings",
+          "text": "Wisdom transmission connects seekers with ancient teachings,<br/> guiding them toward spiritual awakening.  ",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Knowledge from the Ancients  ",
+          "title": " Receiving the <br/>Gift of Wisdom ",
+          "text": "Through wisdom transmission, seekers receive sacred knowledge,<br/> connecting them to timeless truths.   ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Sacred Knowledge Unfolded  ",
+          "title": "The Flow of <br/>Eternal Truth  ",
+          "text": "Wisdom transmission provides seekers with the insight to<br/> align with spiritual truth and divine order.   ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Awakening Through Sacred Teachings ",
+          "title": " Receiving the Light<br/> of Wisdom",
+          "text": "Through wisdom transmission, seekers connect with the<br/> sacred lineage of spiritual knowledge. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Spiritual Inheritance Unfolded  ",
+          "title": "Receiving the Keys <br/>of Knowledge ",
+          "text": " Wisdom transmission helps seekers align with the spiritual truth passed down through sacred traditions. ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Wisdom Transmission",
+      "html": "<p>Wisdom Transmission explores the science of preserving, transferring, and embodying sacred knowledge across time, space, and consciousness. Rooted in Sufi traditions of lineage, silsila (spiritual chain), and prophetic inheritance, this framework examines how divine wisdom is safeguarded, transmitted, and actualized in individuals and communities.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this structured study merges historical preservation with metaphysical transmission, offering seekers insights into how wisdom is passed, activated, and lived through sacred tradition.</p>",
+      "image": "/assets/images/resources/wisdom.png",
+      "imageAlt": "Wisdom Transmission",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Preserving the Integrity of Sacred Knowledge " },
+        { "text": "Understanding the  Spiritual Transmission & Activation" },
+        { "text": "Bridging Historical Lineages with Modern Seekers" },
+        { "text": " Ensuring the Practical Application of Transmitted Wisdom" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        { "title": "Knowledge Preservation", "image": "/assets/images/blog/preservation.png", "href": "/details" },
+        { "title": "Silsila Dynamics", "image": "/assets/images/blog/silsila.png", "href": "/details" },
+        { "title": "Lineage Integration", "image": "/assets/images/blog/lineage.png", "href": "/details" },
+        { "title": "Prophetic Inheritance", "image": "/assets/images/blog/inheritance.png", "href": "/details" },
+        { "title": "Sacred Embodiment", "image": "/assets/images/blog/sacredembodiment.png", "href": "/details" },
+        { "title": "Community Dynamics", "image": "/assets/images/blog/community.png", "href": "/details" }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}

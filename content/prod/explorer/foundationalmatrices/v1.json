@@ -1,0 +1,109 @@
+{
+  "id": "foundationalmatrices",
+  "section": "explorer",
+  "slug": "foundationalmatrices",
+  "title": "Foundational Matrices",
+  "subtitle": "Blueprint of Spiritual Design",
+  "seo": {
+    "title": "Foundational Matrices",
+    "description": "Discovering the Core of Existence"
+  },
+  "blocks": [
+    {
+      "type": "heroSlider",
+      "slides": [
+        {
+          "subTitle": "Blueprint of Spiritual Design",
+          "title": "Discovering the Core <br/>of Existence",
+          "text": " Foundational matrices reveal the hidden patterns of creation, guiding seekers <br/>toward the universal truth and spiritual balance.  ",
+          "buttonText": "Read More",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Patterns of Divine Order ",
+          "title": "Unlocking the Mysteries<br/> of Creation",
+          "text": "Foundational matrices provide a map to understanding existence through<br/> spiritual codes and sacred geometric alignments.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Decoding the Sacred Patterns",
+          "title": " Exploring the Core<br/> of Reality",
+          "text": "Spiritual matrices offer insight into the architecture of<br/> existence, connecting seekers with the hidden order of life.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": " Keys to Spiritual Frameworks  ",
+          "title": "Mapping the Divine<br/> Blueprints ",
+          "text": "Foundational matrices serve as spiritual keys to understanding<br/> creation and unlocking higher states of consciousness.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/membership"
+        },
+        {
+          "subTitle": "Understanding Life’s Sacred Grid",
+          "title": "  Foundational Insights <br/>into Creation",
+          "text": "The foundational matrices reflect the sacred structure of existence,<br/> guiding seekers to the heart of divine truth.  ",
+          "buttonText": "Join Now",
+          "buttonLink": "/"
+        }
+      ]
+    },
+    {
+      "type": "imageTextSplit",
+      "tagline": "Foundational Matrices",
+      "html": "<p>The Foundational Matrices serve as a structured framework for exploring the intersection of mysticism, science, and consciousness. Rooted in classical Sufi knowledge yet adapted for the modern seeker, this study unveils the hidden order of existence through mathematical, cosmological, and psychological dimensions.</p><p>At the Kashmir Sufi Science Center, under the Sufi Science Explorer Module, this structured approach provides seekers with a scientific yet experiential path to understanding divine reality, soul dynamics, and cosmic harmony.</p>",
+      "image": "/assets/images/resources/matrices.png",
+      "imageAlt": "Foundational Matrices",
+      "imageWidth": 350,
+      "imageHeight": 350,
+      "imagePosition": "right"
+    },
+    {
+      "type": "featureList",
+      "items": [
+        { "text": "Bridging Ancient Knowledge with Modern Inquiry" },
+        { "text": "A Structured Path for Seekers, Thinkers & Practitioners" },
+        { "text": "Integrating Mysticism with Scientific Exploration" },
+        { "text": "Practical Applications for Consciousness & Transformation" }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        {
+          "title": "Spiritual Foundations",
+          "image": "/assets/images/blog/spiritual.png",
+          "href": "/details"
+        },
+        {
+          "title": "Mystical Cosmology",
+          "image": "/assets/images/blog/cosmology.png",
+          "href": "/details"
+        },
+        {
+          "title": "Divine Numerology",
+          "image": "/assets/images/blog/numerology.png",
+          "href": "/details"
+        },
+        {
+          "title": "Attribute Studies",
+          "image": "/assets/images/blog/attributes.png",
+          "href": "/details"
+        },
+        {
+          "title": "Soul Psychology",
+          "image": "/assets/images/blog/psycology.png",
+          "href": "/details"
+        },
+        {
+          "title": "Unity Laboratory",
+          "image": "/assets/images/blog/unity.png",
+          "href": "/details"
+        }
+      ]
+    }
+  ],
+  "version": 1,
+  "updatedAt": "2025-05-29T00:00:00.000Z"
+}
