@@ -212,7 +212,7 @@ export default function ExplorerPreview({
             return;
           }
         }
-        const res = await axios.get(`/v1/content/explorer/${slug}`);
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/explorer/${slug}`);
         setData(res.data?.data as ContentItem);
       } finally {
         setLoading(false);

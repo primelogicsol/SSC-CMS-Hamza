@@ -186,7 +186,7 @@ export default function AcademyPreview({
             return;
           }
         }
-        const res = await axios.get(`/v1/content/academy/${slug}`);
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/academy/${slug}`);
         setData(res.data?.data as ContentItem);
       } finally {
         setLoading(false);

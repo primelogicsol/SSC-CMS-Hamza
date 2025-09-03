@@ -19,7 +19,7 @@ export default function AuthGate({ mode }: AuthGateProps) {
       if (mode === "redirectIfAuthed") {
         if (!token) return;
         try {
-          const res = await axios.get(`/v1/user/admin/verify`, {
+          const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/user/admin/verify`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           if (res.status >= 200 && res.status < 300) {
@@ -34,7 +34,7 @@ export default function AuthGate({ mode }: AuthGateProps) {
         return;
       }
       try {
-        const res = await axios.get(`/v1/user/admin/verify`, {
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/user/admin/verify`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!(res.status >= 200 && res.status < 300)) {

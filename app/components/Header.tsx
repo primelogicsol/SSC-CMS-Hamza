@@ -18,7 +18,7 @@ export default function Header() {
       return;
     }
     axios
-      .get(`/v1/user/admin/verify`, {
+      .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/user/admin/verify`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((r) => setIsAuthed(r.status >= 200 && r.status < 300))

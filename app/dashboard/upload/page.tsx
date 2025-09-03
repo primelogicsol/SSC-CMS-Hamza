@@ -81,7 +81,7 @@ export default function BulkUploadPage() {
           const json = JSON.parse(text);
           const parsed: ContentItem = ContentItemSchema.parse(json);
           const res = await axios.put(
-            `/v1/content/${parsed.section}/${parsed.slug}`,
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${parsed.section}/${parsed.slug}`,
             parsed,
             {
               headers: {

@@ -134,7 +134,7 @@ export default function Editor() {
     setStatus("Loading...");
     setLoading(true);
     try {
-      const res = await axios.get(`/v1/content/${section}/${slug}`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}`);
       setData(res.data?.data as ContentItem);
       setStatus("Loaded");
     } catch (e: any) {
@@ -150,7 +150,7 @@ export default function Editor() {
     async function fetchSlugs() {
       setLoadingSlugs(true);
       try {
-        const res = await axios.get(`/v1/content/${section}`);
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}`);
         const items = res?.data?.data?.items || [];
         console.log(items);
         if (!cancelled)
@@ -201,7 +201,7 @@ export default function Editor() {
     setStatus("Saving...");
     setLoading(true);
     try {
-      await axios.put(`/v1/content/${data.section}/${data.slug}`, data, {
+      await axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${data.section}/${data.slug}`, data, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
