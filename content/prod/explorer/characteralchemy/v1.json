@@ -57,9 +57,15 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Bridging Classical Sufi Ethics with Character Development" },
-        { "text": "Providing a Systematic Approach to Spiritual Refinement" },
-        { "text": "Understanding the Science Behind Virtue & Consciousness" },
+        {
+          "text": "Bridging Classical Sufi Ethics with Character Development"
+        },
+        {
+          "text": "Providing a Systematic Approach to Spiritual Refinement"
+        },
+        {
+          "text": "Understanding the Science Behind Virtue & Consciousness"
+        },
         {
           "text": "Developing Actionable Strategies for Living an Aligned, Ethical Life"
         }
@@ -71,32 +77,32 @@
         {
           "title": "Transcendent Ethics",
           "image": "/assets/images/blog/ethics.png",
-          "href": "/details"
+          "href": "/explore/details/transcendent-ethics"
         },
         {
           "title": "Divine Engineering",
           "image": "/assets/images/blog/engineering.png",
-          "href": "/details"
+          "href": "/explore/details/divine-engineering"
         },
         {
           "title": "Sacred Embodiment",
           "image": "/assets/images/blog/embodiment.png",
-          "href": "/details"
+          "href": "/explore/details/sacred-embodiment"
         },
         {
           "title": "Virtue Cultivation",
           "image": "/assets/images/blog/virtue.png",
-          "href": "/details"
+          "href": "/explore/details/virtue-cultivation"
         },
         {
           "title": "Justice Mechanics",
           "image": "/assets/images/blog/justice.png",
-          "href": "/details"
+          "href": "/explore/details/justice-mechanics"
         },
         {
           "title": "Compassionate Action",
           "image": "/assets/images/blog/compassion.png",
-          "href": "/details"
+          "href": "/explore/details/compassionate-action"
         }
       ]
     }

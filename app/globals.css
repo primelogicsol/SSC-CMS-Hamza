@@ -4,4 +4,42 @@
 
 html, body, #__next { height: 100%; }
 
+:root {
+  --fixnix-gray: #646464;
+  --fixnix-gray-rgb: 100, 100, 100;
+  --fixnix-white: #ffffff;
+  --fixnix-white-rgb: 255, 255, 255;
+  --fixnix-lightpurple: #70436b;
+  --fixnix-lightpurple-rgb: 112, 67, 107;
+  --fixnix-darkpurple: #472a44;
+  --fixnix-darkpurple-rgb: 71, 42, 68;
+  --fixnix-primary: #f7f7f9;
+  --fixnix-primary-rgb: 247, 247, 249;
+  --fixnix-bdr-radius: 8px;
+}
+
+/* Additional utility classes for better styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-xl-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+/* Font family classes */
+.font-two {
+  font-family: 'Inter', sans-serif;
+}
+
 

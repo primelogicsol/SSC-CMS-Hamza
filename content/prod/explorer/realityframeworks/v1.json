@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": " Bridging Advanced Science with Sufi Thought" },
-        { "text": "  Exploring the Mechanics of Perception & Reality" },
-        { "text": "The Role of Energy, Information & Consciousness" },
-        { "text": "Providing a Practical Framework for Higher Awareness" }
+        {
+          "text": " Bridging Advanced Science with Sufi Thought"
+        },
+        {
+          "text": "  Exploring the Mechanics of Perception & Reality"
+        },
+        {
+          "text": "The Role of Energy, Information & Consciousness"
+        },
+        {
+          "text": "Providing a Practical Framework for Higher Awareness"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Quantum Dynamics", "image": "/assets/images/blog/quantumdynamics.png", "href": "/details" },
-        { "title": "Holographic Science", "image": "/assets/images/blog/holographic.png", "href": "/details" },
-        { "title": "Multiversal Exploration", "image": "/assets/images/blog/multiversal.png", "href": "/details" },
-        { "title": "Information Mysticism", "image": "/assets/images/blog/information.png", "href": "/details" },
-        { "title": "Electromagnetic Spirituality", "image": "/assets/images/blog/electromagnetic.png", "href": "/details" },
-        { "title": "Gravitational Mysteries", "image": "/assets/images/blog/gravity.png", "href": "/details" }
+        {
+          "title": "Quantum Dynamics",
+          "image": "/assets/images/blog/quantumdynamics.png",
+          "href": "/explore/details/quantum-dynamics"
+        },
+        {
+          "title": "Holographic Science",
+          "image": "/assets/images/blog/holographic.png",
+          "href": "/explore/details/holographic-science"
+        },
+        {
+          "title": "Multiversal Exploration",
+          "image": "/assets/images/blog/multiversal.png",
+          "href": "/explore/details/multiversal-exploration"
+        },
+        {
+          "title": "Information Mysticism",
+          "image": "/assets/images/blog/information.png",
+          "href": "/explore/details/information-mysticism"
+        },
+        {
+          "title": "Electromagnetic Spirituality",
+          "image": "/assets/images/blog/electromagnetic.png",
+          "href": "/explore/details/electromagnetic-spirituality"
+        },
+        {
+          "title": "Gravitational Mysteries",
+          "image": "/assets/images/blog/gravity.png",
+          "href": "/explore/details/gravitational-mysteries"
+        }
       ]
     }
   ],

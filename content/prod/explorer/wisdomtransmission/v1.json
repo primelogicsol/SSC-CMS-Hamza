@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Preserving the Integrity of Sacred Knowledge " },
-        { "text": "Understanding the  Spiritual Transmission & Activation" },
-        { "text": "Bridging Historical Lineages with Modern Seekers" },
-        { "text": " Ensuring the Practical Application of Transmitted Wisdom" }
+        {
+          "text": "Preserving the Integrity of Sacred Knowledge "
+        },
+        {
+          "text": "Understanding the  Spiritual Transmission & Activation"
+        },
+        {
+          "text": "Bridging Historical Lineages with Modern Seekers"
+        },
+        {
+          "text": " Ensuring the Practical Application of Transmitted Wisdom"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Knowledge Preservation", "image": "/assets/images/blog/preservation.png", "href": "/details" },
-        { "title": "Silsila Dynamics", "image": "/assets/images/blog/silsila.png", "href": "/details" },
-        { "title": "Lineage Integration", "image": "/assets/images/blog/lineage.png", "href": "/details" },
-        { "title": "Prophetic Inheritance", "image": "/assets/images/blog/inheritance.png", "href": "/details" },
-        { "title": "Sacred Embodiment", "image": "/assets/images/blog/sacredembodiment.png", "href": "/details" },
-        { "title": "Community Dynamics", "image": "/assets/images/blog/community.png", "href": "/details" }
+        {
+          "title": "Knowledge Preservation",
+          "image": "/assets/images/blog/preservation.png",
+          "href": "/explore/details/knowledge-preservation"
+        },
+        {
+          "title": "Silsila Dynamics",
+          "image": "/assets/images/blog/silsila.png",
+          "href": "/explore/details/silsila-dynamics"
+        },
+        {
+          "title": "Lineage Integration",
+          "image": "/assets/images/blog/lineage.png",
+          "href": "/explore/details/lineage-integration"
+        },
+        {
+          "title": "Prophetic Inheritance",
+          "image": "/assets/images/blog/inheritance.png",
+          "href": "/explore/details/prophetic-inheritance"
+        },
+        {
+          "title": "Sacred Embodiment",
+          "image": "/assets/images/blog/sacredembodiment.png",
+          "href": "/explore/details/sacred-embodiment"
+        },
+        {
+          "title": "Community Dynamics",
+          "image": "/assets/images/blog/community.png",
+          "href": "/explore/details/community-dynamics"
+        }
       ]
     }
   ],

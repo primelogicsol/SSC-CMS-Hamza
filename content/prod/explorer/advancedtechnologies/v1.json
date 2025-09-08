@@ -77,32 +77,32 @@
         {
           "title": "Energy Systems",
           "image": "/assets/images/blog/energy.png",
-          "href": "/details"
+          "href": "/explore/details/energy-systems"
         },
         {
           "title": "Luminous Activation",
           "image": "/assets/images/blog/luminous.png",
-          "href": "/details"
+          "href": "/explore/details/luminous-activation"
         },
         {
           "title": "Energy Crystallography",
           "image": "/assets/images/blog/crystallography.png",
-          "href": "/details"
+          "href": "/explore/details/energy-crystallography"
         },
         {
           "title": "Vibrational Science",
           "image": "/assets/images/blog/vibrational.png",
-          "href": "/details"
+          "href": "/explore/details/vibrational-science"
         },
         {
           "title": "Particle Physics",
           "image": "/assets/images/blog/particle.png",
-          "href": "/details"
+          "href": "/explore/details/particle-physics"
         },
         {
           "title": "Symmetry Patterning",
           "image": "/assets/images/blog/symmetry.png",
-          "href": "/details"
+          "href": "/explore/details/symmetry-patterning"
         }
       ]
     }

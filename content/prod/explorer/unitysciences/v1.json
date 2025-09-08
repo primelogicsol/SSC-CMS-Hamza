@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Bridging Sufi Mysticism & Scientific Inquiry into Oneness" },
-        { "text": "Exploring the Hidden Science of Divine Order & Multiplicity" },
-        { "text": "The Mechanics of Separation & Reunification" },
-        { "text": " Developing Practical Techniques for Unity Consciousness" }
+        {
+          "text": "Bridging Sufi Mysticism & Scientific Inquiry into Oneness"
+        },
+        {
+          "text": "Exploring the Hidden Science of Divine Order & Multiplicity"
+        },
+        {
+          "text": "The Mechanics of Separation & Reunification"
+        },
+        {
+          "text": " Developing Practical Techniques for Unity Consciousness"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Multiplicity Studies", "image": "/assets/images/blog/multiplicity.png", "href": "/details" },
-        { "title": "Oneness Dynamics", "image": "/assets/images/blog/oneness.png", "href": "/details" },
-        { "title": "Names Manifestation", "image": "/assets/images/blog/names.png", "href": "/details" },
-        { "title": "Separation Mechanics", "image": "/assets/images/blog/separation.png", "href": "/details" },
-        { "title": "Unity Technology", "image": "/assets/images/blog/unitytechnology.png", "href": "/details" },
-        { "title": "Divine Expression", "image": "/assets/images/blog/expression.png", "href": "/details" }
+        {
+          "title": "Multiplicity Studies",
+          "image": "/assets/images/blog/multiplicity.png",
+          "href": "/explore/details/multiplicity-studies"
+        },
+        {
+          "title": "Oneness Dynamics",
+          "image": "/assets/images/blog/oneness.png",
+          "href": "/explore/details/oneness-dynamics"
+        },
+        {
+          "title": "Names Manifestation",
+          "image": "/assets/images/blog/names.png",
+          "href": "/explore/details/names-manifestation"
+        },
+        {
+          "title": "Separation Mechanics",
+          "image": "/assets/images/blog/separation.png",
+          "href": "/explore/details/separation-mechanics"
+        },
+        {
+          "title": "Unity Technology",
+          "image": "/assets/images/blog/unitytechnology.png",
+          "href": "/explore/details/unity-technology"
+        },
+        {
+          "title": "Divine Expression",
+          "image": "/assets/images/blog/expression.png",
+          "href": "/explore/details/divine-expression"
+        }
       ]
     }
   ],

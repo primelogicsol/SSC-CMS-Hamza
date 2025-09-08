@@ -81,7 +81,7 @@ function ManualEntry() {
 
 type IndexItem = { slug: string; title?: string; path?: string };
 type ContentItem = {
-  section: "explorer" | "academy";
+  section: "explorer" | "academy" | "explorer-details" | "academy-details";
   slug: string;
   title: string;
   updatedAt?: string;
@@ -97,6 +97,8 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [explorer, setExplorer] = useState<IndexItem[]>([]);
   const [academy, setAcademy] = useState<IndexItem[]>([]);
+  const [explorerDetails, setExplorerDetails] = useState<IndexItem[]>([]);
+  const [academyDetails, setAcademyDetails] = useState<IndexItem[]>([]);
   const [status, setStatus] = useState("");
   const [recent, setRecent] = useState<ContentItem[]>([]);
 
@@ -105,18 +107,65 @@ export default function Dashboard() {
     async function load() {
       setLoading(true);
       try {
-        const [ex, ac] = await Promise.all([
-          axios.get("/v1/content/explorer").then((r) => r.data),
-          axios.get("/v1/content/academy").then((r) => r.data),
+        const [ex, ac, ed, ad] = await Promise.all([
+          axios
+            .get("/v1/content/explorer", {
+              params: { _t: Date.now() },
+              headers: {
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                Pragma: "no-cache",
+                Expires: "0",
+              },
+            })
+            .then((r) => r.data),
+          axios
+            .get("/v1/content/academy", {
+              params: { _t: Date.now() },
+              headers: {
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                Pragma: "no-cache",
+                Expires: "0",
+              },
+            })
+            .then((r) => r.data),
+          axios
+            .get("/v1/content/explorer-details", {
+              params: { _t: Date.now() },
+              headers: {
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                Pragma: "no-cache",
+                Expires: "0",
+              },
+            })
+            .then((r) => r.data),
+          axios
+            .get("/v1/content/academy-details", {
+              params: { _t: Date.now() },
+              headers: {
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                Pragma: "no-cache",
+                Expires: "0",
+              },
+            })
+            .then((r) => r.data),
         ]);
         if (!cancelled) {
           setExplorer(ex?.data?.items || []);
           setAcademy(ac?.data?.items || []);
+          setExplorerDetails(ed?.data?.items || []);
+          setAcademyDetails(ad?.data?.items || []);
         }
         // Fetch details to compute recent changes
         const exDetails = (ex?.data?.items || []).slice(0, 20).map((i: any) =>
           axios
-            .get(`/v1/content/explorer/${i.slug}`)
+            .get(`/v1/content/explorer/${i.slug}`, {
+              params: { _t: Date.now() },
+              headers: {
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                Pragma: "no-cache",
+                Expires: "0",
+              },
+            })
             .then((r) => ({
               ...(r?.data?.data || {}),
               section: "explorer" as const,
@@ -125,14 +174,41 @@ export default function Dashboard() {
         );
         const acDetails = (ac?.data?.items || []).slice(0, 20).map((i: any) =>
           axios
-            .get(`/v1/content/academy/${i.slug}`)
+            .get(`/v1/content/academy/${i.slug}`, {
+              params: { _t: Date.now() },
+              headers: {
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                Pragma: "no-cache",
+                Expires: "0",
+              },
+            })
             .then((r) => ({
               ...(r?.data?.data || {}),
               section: "academy" as const,
             }))
             .catch(() => null)
         );
-        const details = await Promise.all([...exDetails, ...acDetails]);
+        const edDetails = (ed?.data?.items || []).slice(0, 20).map((i: any) =>
+          axios
+            .get(`/v1/content/explorer-details/${i.slug}`, {
+              params: { _t: Date.now() },
+              headers: {
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                Pragma: "no-cache",
+                Expires: "0",
+              },
+            })
+            .then((r) => ({
+              ...(r?.data?.data || {}),
+              section: "explorer-details" as const,
+            }))
+            .catch(() => null)
+        );
+        const details = await Promise.all([
+          ...exDetails,
+          ...acDetails,
+          ...edDetails,
+        ]);
         const cleaned: ContentItem[] = details
           .filter(Boolean)
           .map((d: any) => ({
@@ -191,7 +267,7 @@ export default function Dashboard() {
       {loading ? (
         <CircularLoader label="Loading content indices" />
       ) : (
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded shadow p-5">
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-lg font-semibold">Explorer</h2>
@@ -220,6 +296,44 @@ export default function Dashboard() {
             </div>
             <ul className="space-y-2 max-h-64 overflow-auto">
               {academy.map((i) => (
+                <li
+                  key={i.slug}
+                  className="flex items-center justify-between border-b py-2"
+                >
+                  <span className="truncate pr-3">{i.title || i.slug}</span>
+                  <span className="text-xs text-gray-500">{i.slug}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-white rounded shadow p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-lg font-semibold">Explorer Details</h2>
+              <Link className="text-sm text-fixnix-lightpurple" href="/editor">
+                Edit
+              </Link>
+            </div>
+            <ul className="space-y-2 max-h-64 overflow-auto">
+              {explorerDetails.map((i) => (
+                <li
+                  key={i.slug}
+                  className="flex items-center justify-between border-b py-2"
+                >
+                  <span className="truncate pr-3">{i.title || i.slug}</span>
+                  <span className="text-xs text-gray-500">{i.slug}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-white rounded shadow p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-lg font-semibold">Academy Details</h2>
+              <Link className="text-sm text-fixnix-lightpurple" href="/editor">
+                Edit
+              </Link>
+            </div>
+            <ul className="space-y-2 max-h-64 overflow-auto">
+              {academyDetails.map((i) => (
                 <li
                   key={i.slug}
                   className="flex items-center justify-between border-b py-2"

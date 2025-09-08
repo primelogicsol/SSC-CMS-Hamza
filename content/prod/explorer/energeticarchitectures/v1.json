@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Bridging Sufi Energy Sciences & Modern Biophysics" },
-        { "text": "Understanding the Connection Between Energy & Spirituality" },
-        { "text": "Exploring Consciousness Beyond the Brain in Cells" },
-        { "text": "Techniques for Energy Optimization & Spiritual Vitality" }
+        {
+          "text": "Bridging Sufi Energy Sciences & Modern Biophysics"
+        },
+        {
+          "text": "Understanding the Connection Between Energy & Spirituality"
+        },
+        {
+          "text": "Exploring Consciousness Beyond the Brain in Cells"
+        },
+        {
+          "text": "Techniques for Energy Optimization & Spiritual Vitality"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Circulation Systems", "image": "/assets/images/blog/circulation.png", "href": "/details" },
-        { "title": "Force Amplification", "image": "/assets/images/blog/force.png", "href": "/details" },
-        { "title": "Purification Science", "image": "/assets/images/blog/purfication.png", "href": "/details" },
-        { "title": "Spiritual Nutrition", "image": "/assets/images/blog/nutrition.png", "href": "/details" },
-        { "title": "Cellular Consciousness", "image": "/assets/images/blog/cellular.png", "href": "/details" },
-        { "title": "Bioenergetic Fields", "image": "/assets/images/blog/bionenergy.png", "href": "/details" }
+        {
+          "title": "Circulation Systems",
+          "image": "/assets/images/blog/circulation.png",
+          "href": "/explore/details/circulation-systems"
+        },
+        {
+          "title": "Force Amplification",
+          "image": "/assets/images/blog/force.png",
+          "href": "/explore/details/force-amplification"
+        },
+        {
+          "title": "Purification Science",
+          "image": "/assets/images/blog/purfication.png",
+          "href": "/explore/details/purification-science"
+        },
+        {
+          "title": "Spiritual Nutrition",
+          "image": "/assets/images/blog/nutrition.png",
+          "href": "/explore/details/spiritual-nutrition"
+        },
+        {
+          "title": "Cellular Consciousness",
+          "image": "/assets/images/blog/cellular.png",
+          "href": "/explore/details/cellular-consciousness"
+        },
+        {
+          "title": "Bioenergetic Fields",
+          "image": "/assets/images/blog/bionenergy.png",
+          "href": "/explore/details/bioenergetic-fields"
+        }
       ]
     }
   ],

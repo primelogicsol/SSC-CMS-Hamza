@@ -57,9 +57,15 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Bridging Environmental Science with Spiritual Wisdom" },
-        { "text": " Exploring Divine Patterns within Natural Systems" },
-        { "text": " Developing Ethical & Sustainable Approaches to Ecology" },
+        {
+          "text": "Bridging Environmental Science with Spiritual Wisdom"
+        },
+        {
+          "text": " Exploring Divine Patterns within Natural Systems"
+        },
+        {
+          "text": " Developing Ethical & Sustainable Approaches to Ecology"
+        },
         {
           "text": " Fostering Awareness of Humanity’s Role in Creation Stewardship"
         }
@@ -71,32 +77,32 @@
         {
           "title": "Sacred Ecology",
           "image": "/assets/images/blog/ecology.png",
-          "href": "/details"
+          "href": "/explore/details/sacred-ecology"
         },
         {
           "title": "Divine Balance",
           "image": "/assets/images/blog/balance.png",
-          "href": "/details"
+          "href": "/explore/details/divine-balance"
         },
         {
           "title": "Creation Stewardship",
           "image": "/assets/images/blog/stewardship.png",
-          "href": "/details"
+          "href": "/explore/details/creation-stewardship"
         },
         {
           "title": "Natural Communication",
           "image": "/assets/images/blog/communication.png",
-          "href": "/details"
+          "href": "/explore/details/natural-communication"
         },
         {
           "title": "Ecosystem Mapping",
           "image": "/assets/images/blog/mapping.png",
-          "href": "/details"
+          "href": "/explore/details/ecosystem-mapping"
         },
         {
           "title": "Earth Resonance",
           "image": "/assets/images/blog/resonance.png",
-          "href": "/details"
+          "href": "/explore/details/earth-resonance"
         }
       ]
     }

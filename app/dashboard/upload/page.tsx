@@ -47,7 +47,7 @@ export default function BulkUploadPage() {
           subtitle: "Optional subtitle",
           seo: { title: "Foundational Matrices", description: "Desc" },
           blocks: [
-            { type: "richText", html: "<p>Some content</p>" },
+            { type: "richText", content: "<p>Some content</p>" },
             {
               type: "cardGrid",
               cards: [

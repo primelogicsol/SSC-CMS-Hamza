@@ -9,6 +9,7 @@
     "start": "next start -p 3010"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "axios": "^1.7.4",
     "next": "14.2.4",
     "react": "18.3.1",

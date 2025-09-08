@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": " Bridging Sufi Healing Traditions & Modern Science"  },
-        { "text": "Exploring the Role of Energy, Mind & Spirit in Well-Being" },
-        { "text": "Understanding Biofield Mechanics & Healing Sciences" },
-        { "text": "Developing Practical Tools for Self-Healing & Spiritual Vitality" }
+        {
+          "text": " Bridging Sufi Healing Traditions & Modern Science"
+        },
+        {
+          "text": "Exploring the Role of Energy, Mind & Spirit in Well-Being"
+        },
+        {
+          "text": "Understanding Biofield Mechanics & Healing Sciences"
+        },
+        {
+          "text": "Developing Practical Tools for Self-Healing & Spiritual Vitality"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Prophetic Medicine", "image": "/assets/images/blog/prophetic.png", "href": "/details" },
-        { "title": "Interdimensional Protocols", "image": "/assets/images/blog/interdimensional.png", "href": "/details" },
-        { "title": "Biofield Measurement", "image": "/assets/images/blog/biofield.png", "href": "/details" },
-        { "title": "Epigenetic Influence", "image": "/assets/images/blog/epigentic.png", "href": "/details" },
-        { "title": "Heart Intelligence", "image": "/assets/images/blog/heart.png", "href": "/details" },
-        { "title": "Regenerative Wisdom", "image": "/assets/images/blog/regenerative.png", "href": "/details" }
+        {
+          "title": "Prophetic Medicine",
+          "image": "/assets/images/blog/prophetic.png",
+          "href": "/explore/details/prophetic-medicine"
+        },
+        {
+          "title": "Interdimensional Protocols",
+          "image": "/assets/images/blog/interdimensional.png",
+          "href": "/explore/details/interdimensional-protocols"
+        },
+        {
+          "title": "Biofield Measurement",
+          "image": "/assets/images/blog/biofield.png",
+          "href": "/explore/details/biofield-measurement"
+        },
+        {
+          "title": "Epigenetic Influence",
+          "image": "/assets/images/blog/epigentic.png",
+          "href": "/explore/details/epigenetic-influence"
+        },
+        {
+          "title": "Heart Intelligence",
+          "image": "/assets/images/blog/heart.png",
+          "href": "/explore/details/heart-intelligence"
+        },
+        {
+          "title": "Regenerative Wisdom",
+          "image": "/assets/images/blog/regenerative.png",
+          "href": "/explore/details/regenerative-wisdom"
+        }
       ]
     }
   ],

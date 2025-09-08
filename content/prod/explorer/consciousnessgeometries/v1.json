@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Bridging Quantum Science with Sufi Consciousness Studies" },
-        { "text": " Awareness through Geometric & Multi-Dimensional Models" },
-        { "text": "Exploring Non-Locality, Perception, & Nature of Reality" },
-        { "text": "Developing Practical Applications for Conscious Evolution" }
+        {
+          "text": "Bridging Quantum Science with Sufi Consciousness Studies"
+        },
+        {
+          "text": " Awareness through Geometric & Multi-Dimensional Models"
+        },
+        {
+          "text": "Exploring Non-Locality, Perception, & Nature of Reality"
+        },
+        {
+          "text": "Developing Practical Applications for Conscious Evolution"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Awareness Cartography", "image": "/assets/images/blog/awareness.png", "href": "/details" },
-        { "title": "Quantum Integration", "image": "/assets/images/blog/quantum.png", "href": "/details" },
-        { "title": "Non-Local Studies", "image": "/assets/images/blog/nonlocal.png", "href": "/details" },
-        { "title": "Dimensional Perception", "image": "/assets/images/blog/dimensional.png", "href": "/details" },
-        { "title": "Temporal Folding", "image": "/assets/images/blog/temporal.png", "href": "/details" },
-        { "title": "Field Navigation", "image": "/assets/images/blog/field.png", "href": "/details" }
+        {
+          "title": "Awareness Cartography",
+          "image": "/assets/images/blog/awareness.png",
+          "href": "/explore/details/awareness-cartography"
+        },
+        {
+          "title": "Quantum Integration",
+          "image": "/assets/images/blog/quantum.png",
+          "href": "/explore/details/quantum-integration"
+        },
+        {
+          "title": "Non-Local Studies",
+          "image": "/assets/images/blog/nonlocal.png",
+          "href": "/explore/details/non-local-studies"
+        },
+        {
+          "title": "Dimensional Perception",
+          "image": "/assets/images/blog/dimensional.png",
+          "href": "/explore/details/dimensional-perception"
+        },
+        {
+          "title": "Temporal Folding",
+          "image": "/assets/images/blog/temporal.png",
+          "href": "/explore/details/temporal-folding"
+        },
+        {
+          "title": "Field Navigation",
+          "image": "/assets/images/blog/field.png",
+          "href": "/explore/details/field-navigation"
+        }
       ]
     }
   ],

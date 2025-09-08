@@ -62,10 +62,18 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Bridging Ancient Knowledge with Modern Inquiry" },
-        { "text": "A Structured Path for Seekers, Thinkers & Practitioners" },
-        { "text": "Integrating Mysticism with Scientific Exploration" },
-        { "text": "Practical Applications for Consciousness & Transformation" }
+        {
+          "text": "Bridging Ancient Knowledge with Modern Inquiry"
+        },
+        {
+          "text": "A Structured Path for Seekers, Thinkers & Practitioners"
+        },
+        {
+          "text": "Integrating Mysticism with Scientific Exploration"
+        },
+        {
+          "text": "Practical Applications for Consciousness & Transformation"
+        }
       ]
     },
     {
@@ -74,32 +82,32 @@
         {
           "title": "Spiritual Foundations",
           "image": "/assets/images/blog/spiritual.png",
-          "href": "/details"
+          "href": "/explore/details/spiritual-foundations"
         },
         {
           "title": "Mystical Cosmology",
           "image": "/assets/images/blog/cosmology.png",
-          "href": "/details"
+          "href": "/explore/details/mystical-cosmology"
         },
         {
           "title": "Divine Numerology",
           "image": "/assets/images/blog/numerology.png",
-          "href": "/details"
+          "href": "/explore/details/divine-numerology"
         },
         {
           "title": "Attribute Studies",
           "image": "/assets/images/blog/attributes.png",
-          "href": "/details"
+          "href": "/explore/details/attribute-studies"
         },
         {
           "title": "Soul Psychology",
           "image": "/assets/images/blog/psycology.png",
-          "href": "/details"
+          "href": "/explore/details/soul-psychology"
         },
         {
           "title": "Unity Laboratory",
           "image": "/assets/images/blog/unity.png",
-          "href": "/details"
+          "href": "/explore/details/unity-laboratory"
         }
       ]
     }

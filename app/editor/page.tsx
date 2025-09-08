@@ -14,7 +14,7 @@ type Block =
   | { type: "heroSlider"; slides: Slide[] }
   | { type: "sectionHeader"; tagline?: string; title: string; html?: string }
   | { type: "featureList"; items: { text: string }[] }
-  | { type: "richText"; html: string }
+  | { type: "richText"; content: string }
   | {
       type: "cardGrid";
       cards: { title: string; text?: string; image?: string; href?: string }[];
@@ -34,14 +34,37 @@ type Block =
       imageWidth?: number;
       imageHeight?: number;
       imagePosition?: "left" | "right";
-    };
+    }
+  | {
+      type: "propheticSayings";
+      items: { quote: string; explanation: string; author?: string }[];
+    }
+  | {
+      type: "scientificReflections";
+      items: { quote: string; explanation: string; author?: string }[];
+    }
+  | {
+      type: "kashmiriWisdom";
+      items: { quote: string; explanation: string; author?: string }[];
+    }
+  | {
+      type: "scholarlyDialogs";
+      items: { quote: string; explanation: string; author?: string }[];
+    }
+  | { type: "coreConcept"; content: string }
+  | { type: "keyConcepts"; concepts: string[] }
+  | { type: "practicalApplications"; applications: string[] }
+  | { type: "forNewStudents"; content: string }
+  | { type: "forMaturePractitioners"; content: string };
 
 type ContentItem = {
   id?: string;
-  section: "explorer" | "academy";
+  section: "explorer" | "academy" | "explorer-details" | "academy-details";
   slug: string;
   title: string;
   subtitle?: string;
+  parentPage?: string;
+  cardTitle?: string;
   seo?: { title?: string; description?: string };
   blocks: Block[];
   version?: number;
@@ -72,7 +95,7 @@ const defaultBlockFor = (type: Block["type"]): Block => {
   if (type === "featureList")
     return { type: "featureList", items: [{ text: "A feature" }] } as Block;
   if (type === "richText")
-    return { type: "richText", html: "<p>Some content</p>" } as Block;
+    return { type: "richText", content: "<p>Some content</p>" } as Block;
   if (type === "cardGrid")
     return {
       type: "cardGrid",
@@ -108,11 +131,67 @@ const defaultBlockFor = (type: Block["type"]): Block => {
       imageHeight: 350,
       imagePosition: "right",
     } as Block;
-  return { type: "richText", html: "<p>New block</p>" } as Block;
+  if (type === "propheticSayings")
+    return {
+      type: "propheticSayings",
+      items: [{ quote: "New prophetic saying", explanation: "Explanation" }],
+    } as Block;
+  if (type === "scientificReflections")
+    return {
+      type: "scientificReflections",
+      items: [
+        {
+          quote: "New scientific reflection",
+          explanation: "Explanation",
+          author: "Author",
+        },
+      ],
+    } as Block;
+  if (type === "kashmiriWisdom")
+    return {
+      type: "kashmiriWisdom",
+      items: [
+        {
+          quote: "New Kashmiri wisdom",
+          explanation: "Explanation",
+          author: "Author",
+        },
+      ],
+    } as Block;
+  if (type === "scholarlyDialogs")
+    return {
+      type: "scholarlyDialogs",
+      items: [{ quote: "New scholarly dialog", explanation: "Explanation" }],
+    } as Block;
+  if (type === "coreConcept")
+    return { type: "coreConcept", content: "<p>New core concept</p>" } as Block;
+  if (type === "keyConcepts")
+    return {
+      type: "keyConcepts",
+      concepts: ["New concept 1", "New concept 2"],
+    } as Block;
+  if (type === "practicalApplications")
+    return {
+      type: "practicalApplications",
+      applications: ["New application 1", "New application 2"],
+    } as Block;
+  if (type === "forNewStudents")
+    return {
+      type: "forNewStudents",
+      content: "<p>Content for new students</p>",
+    } as Block;
+  if (type === "forMaturePractitioners")
+    return {
+      type: "forMaturePractitioners",
+      content: "<p>Content for mature practitioners</p>",
+    } as Block;
+  return { type: "richText", content: "<p>New block</p>" } as Block;
 };
 
 export default function Editor() {
-  const [section, setSection] = useState<"explorer" | "academy">("explorer");
+  const [section, setSection] = useState<
+    "explorer" | "academy" | "explorer-details" | "academy-details"
+  >("explorer");
   const [slug, setSlug] = useState<string>("");
   const [status, setStatus] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -137,7 +216,17 @@ export default function Editor() {
     setStatus("Loading...");
     setLoading(true);
     try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}`);
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}`,
+        {
+          params: { _t: Date.now() },
+          headers: {
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            Pragma: "no-cache",
+            Expires: "0",
+          },
+        }
+      );
       setData(res.data?.data as ContentItem);
       setStatus("Loaded");
       // Load available versions after loading content
@@ -153,7 +242,17 @@ export default function Editor() {
     if (!section || !slug) return;
     setLoadingVersions(true);
     try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}/versions`);
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}/versions`,
+        {
+          params: { _t: Date.now() },
+          headers: {
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            Pragma: "no-cache",
+            Expires: "0",
+          },
+        }
+      );
       const versions = res.data?.data?.versions || [];
       setAvailableVersions(versions);
       if (versions.length > 0) {
@@ -172,12 +271,26 @@ export default function Editor() {
     setStatus(`Loading version ${version}...`);
     setLoading(true);
     try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}/version/${version}`);
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}/${slug}/version/${version}`,
+        {
+          params: { _t: Date.now() },
+          headers: {
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            Pragma: "no-cache",
+            Expires: "0",
+          },
+        }
+      );
       setData(res.data?.data as ContentItem);
       setCurrentVersion(version);
       setStatus(`Loaded version ${version}`);
     } catch (e: any) {
-      setStatus(e?.response?.data?.message || e?.message || `Failed to load version ${version}`);
+      setStatus(
+        e?.response?.data?.message ||
+          e?.message ||
+          `Failed to load version ${version}`
+      );
     } finally {
       setLoading(false);
     }
@@ -189,7 +302,17 @@ export default function Editor() {
     async function fetchSlugs() {
       setLoadingSlugs(true);
       try {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}`);
+        const res = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${section}`,
+          {
+            params: { _t: Date.now() },
+            headers: {
+              "Cache-Control": "no-cache, no-store, must-revalidate",
+              Pragma: "no-cache",
+              Expires: "0",
+            },
+          }
+        );
         const items = res?.data?.data?.items || [];
         console.log(items);
         if (!cancelled)
@@ -240,12 +363,16 @@ export default function Editor() {
     setStatus("Saving...");
     setLoading(true);
     try {
-      await axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${data.section}/${data.slug}`, data, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.put(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/v1/content/${data.section}/${data.slug}`,
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setStatus("Saved");
     } catch (e: any) {
       setStatus(e?.response?.data?.message || e?.message || "Failed to save");
@@ -274,8 +401,8 @@ export default function Editor() {
     setData({ ...data, blocks });
   };
 
-  const blockTypes: Block["type"][] = useMemo(
-    () => [
+  const blockTypes: Block["type"][] = useMemo(() => {
+    const baseTypes: Block["type"][] = [
       "heroSlider",
       "sectionHeader",
       "featureList",
@@ -284,9 +411,25 @@ export default function Editor() {
       "sidebar",
       "listToolbar",
       "imageTextSplit",
-    ],
-    []
-  );
+    ];
+
+    if (section === "explorer-details") {
+      return [
+        ...baseTypes,
+        "propheticSayings",
+        "scientificReflections",
+        "kashmiriWisdom",
+        "scholarlyDialogs",
+        "coreConcept",
+        "keyConcepts",
+        "practicalApplications",
+        "forNewStudents",
+        "forMaturePractitioners",
+      ];
+    }
+
+    return baseTypes;
+  }, [section]);
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
@@ -309,6 +452,8 @@ export default function Editor() {
         >
           <option value="explorer">explorer</option>
           <option value="academy">academy</option>
+          <option value="explorer-details">explorer-details</option>
+          <option value="academy-details">academy-details</option>
         </select>
         <div className="relative flex-1" ref={slugBoxRef}>
           <input
@@ -391,7 +536,7 @@ export default function Editor() {
           >
             {loading ? "Loading..." : "Load"}
           </button>
-          
+
           {/* Version Selector */}
           {availableVersions.length > 1 && (
             <div className="flex items-center gap-2">
@@ -404,13 +549,16 @@ export default function Editor() {
               >
                 {availableVersions.map((version) => (
                   <option key={version} value={version}>
-                    v{version} {version === Math.max(...availableVersions) ? "(Latest)" : ""}
+                    v{version}{" "}
+                    {version === Math.max(...availableVersions)
+                      ? "(Latest)"
+                      : ""}
                   </option>
                 ))}
               </select>
             </div>
           )}
-          
+
           <button
             onClick={save}
             disabled={!data || loading}
@@ -436,6 +584,10 @@ export default function Editor() {
                 const url =
                   payload.section === "academy"
                     ? `/preview/academy/${payload.slug}?draft=1`
+                    : payload.section === "academy-details"
+                    ? `/preview/academy-details/${payload.slug}?draft=1`
+                    : payload.section === "explorer-details"
+                    ? `/preview/explorer/details/${payload.slug}?draft=1`
                     : `/preview/explorer/${payload.slug}?draft=1`;
                 window.open(url, "_blank");
               }
@@ -475,6 +627,35 @@ export default function Editor() {
               />
             </div>
           </div>
+
+          {data.section === "explorer-details" && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm text-gray-600">
+                  Parent Page
+                </label>
+                <input
+                  className="w-full border px-2 py-1 rounded"
+                  value={data.parentPage || ""}
+                  onChange={(e) =>
+                    setData({ ...data, parentPage: e.target.value })
+                  }
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-600">
+                  Card Title
+                </label>
+                <input
+                  className="w-full border px-2 py-1 rounded"
+                  value={data.cardTitle || ""}
+                  onChange={(e) =>
+                    setData({ ...data, cardTitle: e.target.value })
+                  }
+                />
+              </div>
+            </div>
+          )}
 
           <div className="flex items-center gap-2">
             <span className="font-semibold">Add Block:</span>
@@ -755,15 +936,18 @@ export default function Editor() {
                   <div className="space-y-2">
                     <textarea
                       className="w-full border p-2 rounded min-h-[120px]"
-                      placeholder="HTML"
-                      value={block.html}
+                      placeholder="Content (HTML)"
+                      value={block.content}
                       onChange={(e) =>
-                        updateBlockAt(idx, { ...block, html: e.target.value })
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
                       }
                     />
                     <div
                       className="prose max-w-none"
-                      dangerouslySetInnerHTML={{ __html: block.html }}
+                      dangerouslySetInnerHTML={{ __html: block.content }}
                     />
                   </div>
                 )}
@@ -1124,6 +1308,446 @@ export default function Editor() {
                     </div>
                   </div>
                 )}
+
+                {/* Explorer Details Block Types */}
+                {block.type === "propheticSayings" && (
+                  <div className="space-y-2">
+                    <div className="space-y-2">
+                      {block.items.map((item, itemIdx) => (
+                        <div
+                          key={itemIdx}
+                          className="border p-3 rounded space-y-2"
+                        >
+                          <input
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Quote"
+                            value={item.quote}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                quote: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <input
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Author (optional)"
+                            value={item.author || ""}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                author: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <textarea
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Explanation"
+                            value={item.explanation}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                explanation: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <button
+                            className="text-red-500 text-sm"
+                            onClick={() => {
+                              const newItems = block.items.filter(
+                                (_, i) => i !== itemIdx
+                              );
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        className="border px-2 py-1 rounded text-sm"
+                        onClick={() => {
+                          const newItems = [
+                            ...block.items,
+                            { quote: "", explanation: "", author: "" },
+                          ];
+                          updateBlockAt(idx, { ...block, items: newItems });
+                        }}
+                      >
+                        Add Item
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {block.type === "scientificReflections" && (
+                  <div className="space-y-2">
+                    <div className="space-y-2">
+                      {block.items.map((item, itemIdx) => (
+                        <div
+                          key={itemIdx}
+                          className="border p-3 rounded space-y-2"
+                        >
+                          <input
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Quote"
+                            value={item.quote}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                quote: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <input
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Author"
+                            value={item.author || ""}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                author: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <textarea
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Explanation"
+                            value={item.explanation}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                explanation: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <button
+                            className="text-red-500 text-sm"
+                            onClick={() => {
+                              const newItems = block.items.filter(
+                                (_, i) => i !== itemIdx
+                              );
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        className="border px-2 py-1 rounded text-sm"
+                        onClick={() => {
+                          const newItems = [
+                            ...block.items,
+                            { quote: "", explanation: "", author: "" },
+                          ];
+                          updateBlockAt(idx, { ...block, items: newItems });
+                        }}
+                      >
+                        Add Item
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {block.type === "kashmiriWisdom" && (
+                  <div className="space-y-2">
+                    <div className="space-y-2">
+                      {block.items.map((item, itemIdx) => (
+                        <div
+                          key={itemIdx}
+                          className="border p-3 rounded space-y-2"
+                        >
+                          <input
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Quote"
+                            value={item.quote}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                quote: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <input
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Author"
+                            value={item.author || ""}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                author: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <textarea
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Explanation"
+                            value={item.explanation}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                explanation: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <button
+                            className="text-red-500 text-sm"
+                            onClick={() => {
+                              const newItems = block.items.filter(
+                                (_, i) => i !== itemIdx
+                              );
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        className="border px-2 py-1 rounded text-sm"
+                        onClick={() => {
+                          const newItems = [
+                            ...block.items,
+                            { quote: "", explanation: "", author: "" },
+                          ];
+                          updateBlockAt(idx, { ...block, items: newItems });
+                        }}
+                      >
+                        Add Item
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {block.type === "scholarlyDialogs" && (
+                  <div className="space-y-2">
+                    <div className="space-y-2">
+                      {block.items.map((item, itemIdx) => (
+                        <div
+                          key={itemIdx}
+                          className="border p-3 rounded space-y-2"
+                        >
+                          <input
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Quote"
+                            value={item.quote}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                quote: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <textarea
+                            className="w-full border px-2 py-1 rounded"
+                            placeholder="Explanation"
+                            value={item.explanation}
+                            onChange={(e) => {
+                              const newItems = [...block.items];
+                              newItems[itemIdx] = {
+                                ...item,
+                                explanation: e.target.value,
+                              };
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          />
+                          <button
+                            className="text-red-500 text-sm"
+                            onClick={() => {
+                              const newItems = block.items.filter(
+                                (_, i) => i !== itemIdx
+                              );
+                              updateBlockAt(idx, { ...block, items: newItems });
+                            }}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        className="border px-2 py-1 rounded text-sm"
+                        onClick={() => {
+                          const newItems = [
+                            ...block.items,
+                            { quote: "", explanation: "" },
+                          ];
+                          updateBlockAt(idx, { ...block, items: newItems });
+                        }}
+                      >
+                        Add Item
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {block.type === "coreConcept" && (
+                  <div className="space-y-2">
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[120px]"
+                      placeholder="Core concept content (HTML)"
+                      value={block.content}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
+
+                {block.type === "keyConcepts" && (
+                  <div className="space-y-2">
+                    <div className="space-y-2">
+                      {block.concepts.map((concept, conceptIdx) => (
+                        <div key={conceptIdx} className="flex gap-2">
+                          <input
+                            className="flex-1 border px-2 py-1 rounded"
+                            placeholder="Concept"
+                            value={concept}
+                            onChange={(e) => {
+                              const newConcepts = [...block.concepts];
+                              newConcepts[conceptIdx] = e.target.value;
+                              updateBlockAt(idx, {
+                                ...block,
+                                concepts: newConcepts,
+                              });
+                            }}
+                          />
+                          <button
+                            className="text-red-500 text-sm"
+                            onClick={() => {
+                              const newConcepts = block.concepts.filter(
+                                (_, i) => i !== conceptIdx
+                              );
+                              updateBlockAt(idx, {
+                                ...block,
+                                concepts: newConcepts,
+                              });
+                            }}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        className="border px-2 py-1 rounded text-sm"
+                        onClick={() => {
+                          const newConcepts = [...block.concepts, ""];
+                          updateBlockAt(idx, {
+                            ...block,
+                            concepts: newConcepts,
+                          });
+                        }}
+                      >
+                        Add Concept
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {block.type === "practicalApplications" && (
+                  <div className="space-y-2">
+                    <div className="space-y-2">
+                      {block.applications.map((application, appIdx) => (
+                        <div key={appIdx} className="flex gap-2">
+                          <input
+                            className="flex-1 border px-2 py-1 rounded"
+                            placeholder="Application"
+                            value={application}
+                            onChange={(e) => {
+                              const newApplications = [...block.applications];
+                              newApplications[appIdx] = e.target.value;
+                              updateBlockAt(idx, {
+                                ...block,
+                                applications: newApplications,
+                              });
+                            }}
+                          />
+                          <button
+                            className="text-red-500 text-sm"
+                            onClick={() => {
+                              const newApplications = block.applications.filter(
+                                (_, i) => i !== appIdx
+                              );
+                              updateBlockAt(idx, {
+                                ...block,
+                                applications: newApplications,
+                              });
+                            }}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        className="border px-2 py-1 rounded text-sm"
+                        onClick={() => {
+                          const newApplications = [...block.applications, ""];
+                          updateBlockAt(idx, {
+                            ...block,
+                            applications: newApplications,
+                          });
+                        }}
+                      >
+                        Add Application
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {block.type === "forNewStudents" && (
+                  <div className="space-y-2">
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[120px]"
+                      placeholder="Content for new students (HTML)"
+                      value={block.content}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
+
+                {block.type === "forMaturePractitioners" && (
+                  <div className="space-y-2">
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[120px]"
+                      placeholder="Content for mature practitioners (HTML)"
+                      value={block.content}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -1153,7 +1777,9 @@ export default function Editor() {
                   )}
                 </div>
                 <div className="text-sm text-gray-600 mt-1">
-                  {currentVersion === version ? "Currently loaded" : "Click to load"}
+                  {currentVersion === version
+                    ? "Currently loaded"
+                    : "Click to load"}
                 </div>
               </div>
             ))}

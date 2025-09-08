@@ -1,5 +1,5 @@
 export type ContentBlock =
-  | { type: "richText"; html: string }
+  | { type: "richText"; content: string }
   | { type: "sectionHeader"; tagline?: string; title: string; html?: string }
   | {
       type: "cardGrid";
@@ -31,14 +31,38 @@ export type ContentBlock =
       searchPlaceholder?: string;
       categories: { label: string; href: string; active?: boolean }[];
     }
-  | { type: "listToolbar"; showingText?: string; sortOptions?: string[] };
+  | { type: "listToolbar"; showingText?: string; sortOptions?: string[] }
+  // Explorer Details specific blocks
+  | {
+      type: "propheticSayings";
+      items: Array<{ quote: string; explanation: string; author?: string }>;
+    }
+  | {
+      type: "scientificReflections";
+      items: Array<{ quote: string; explanation: string; author?: string }>;
+    }
+  | {
+      type: "kashmiriWisdom";
+      items: Array<{ quote: string; explanation: string; author?: string }>;
+    }
+  | {
+      type: "scholarlyDialogs";
+      items: Array<{ quote: string; explanation: string; author?: string }>;
+    }
+  | { type: "coreConcept"; content: string }
+  | { type: "keyConcepts"; concepts: string[] }
+  | { type: "practicalApplications"; applications: string[] }
+  | { type: "forNewStudents"; content: string }
+  | { type: "forMaturePractitioners"; content: string };
 
 export type ContentItem = {
   id: string;
-  section: "explorer" | "academy";
+  section: "explorer" | "academy" | "explorer-details";
   slug: string;
   title: string;
   subtitle?: string;
+  parentPage?: string;
+  cardTitle?: string;
   heroImage?: string;
   seo?: { title?: string; description?: string; keywords?: string[] };
   blocks: ContentBlock[];

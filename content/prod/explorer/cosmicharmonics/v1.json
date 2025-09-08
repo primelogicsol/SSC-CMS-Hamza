@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": " Bridging Science & Astrophysical Exploration" },
-        { "text": "  Understanding the Vibrational Nature of Reality" },
-        { "text": "Aligning Human Consciousness with Universal Harmonics" },
-        { "text": "Exploring How Light, Sound & Time Shape Spiritual Evolution" }
+        {
+          "text": " Bridging Science & Astrophysical Exploration"
+        },
+        {
+          "text": "  Understanding the Vibrational Nature of Reality"
+        },
+        {
+          "text": "Aligning Human Consciousness with Universal Harmonics"
+        },
+        {
+          "text": "Exploring How Light, Sound & Time Shape Spiritual Evolution"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Celestial Navigation", "image": "/assets/images/blog/celestrial.png", "href": "/details" },
-        { "title": "Sacred Time", "image": "/assets/images/blog/time.png", "href": "/details" },
-        { "title": "Quantum Entanglement", "image": "/assets/images/blog/entanglement.png", "href": "/details" },
-        { "title": "Divine Light", "image": "/assets/images/blog/light.png", "href": "/details" },
-        { "title": "Vibrational Cosmology", "image": "/assets/images/blog/vibration.png", "href": "/details" },
-        { "title": "Stellar Wisdom", "image": "/assets/images/blog/stellar.png", "href": "/details" }
+        {
+          "title": "Celestial Navigation",
+          "image": "/assets/images/blog/celestrial.png",
+          "href": "/explore/details/celestial-navigation"
+        },
+        {
+          "title": "Sacred Time",
+          "image": "/assets/images/blog/time.png",
+          "href": "/explore/details/sacred-time"
+        },
+        {
+          "title": "Quantum Entanglement",
+          "image": "/assets/images/blog/entanglement.png",
+          "href": "/explore/details/quantum-entanglement"
+        },
+        {
+          "title": "Divine Light",
+          "image": "/assets/images/blog/light.png",
+          "href": "/explore/details/divine-light"
+        },
+        {
+          "title": "Vibrational Cosmology",
+          "image": "/assets/images/blog/vibration.png",
+          "href": "/explore/details/vibrational-cosmology"
+        },
+        {
+          "title": "Stellar Wisdom",
+          "image": "/assets/images/blog/stellar.png",
+          "href": "/explore/details/stellar-wisdom"
+        }
       ]
     }
   ],

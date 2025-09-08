@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Bridging Sufi Aesthetics with Metaphysical Science" },
-        { "text": "Understanding the Art in Transmission & Transformation" },
-        { "text": "Exploring the Vibrational Effects of Sacred Design" },
-        { "text": "Developing Art as a Tool for Divine Connection " }
+        {
+          "text": "Bridging Sufi Aesthetics with Metaphysical Science"
+        },
+        {
+          "text": "Understanding the Art in Transmission & Transformation"
+        },
+        {
+          "text": "Exploring the Vibrational Effects of Sacred Design"
+        },
+        {
+          "text": "Developing Art as a Tool for Divine Connection "
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Geometric Harmonics", "image": "/assets/images/blog/geometric.png", "href": "/details" },
-        { "title": "Illuminated Calligraphy", "image": "/assets/images/blog/calligraphy.png", "href": "/details" },
-        { "title": "Movement Practices", "image": "/assets/images/blog/movement.png", "href": "/details" },
-        { "title": "Wisdom Poetry", "image": "/assets/images/blog/poetry.png", "href": "/details" },
-        { "title": "Acoustical Engineering", "image": "/assets/images/blog/acoustics.png", "href": "/details" },
-        { "title": "Symbolic Expression", "image": "/assets/images/blog/symbolic.png", "href": "/details" }
+        {
+          "title": "Geometric Harmonics",
+          "image": "/assets/images/blog/geometric.png",
+          "href": "/explore/details/geometric-harmonics"
+        },
+        {
+          "title": "Illuminated Calligraphy",
+          "image": "/assets/images/blog/calligraphy.png",
+          "href": "/explore/details/illuminated-calligraphy"
+        },
+        {
+          "title": "Movement Practices",
+          "image": "/assets/images/blog/movement.png",
+          "href": "/explore/details/movement-practices"
+        },
+        {
+          "title": "Wisdom Poetry",
+          "image": "/assets/images/blog/poetry.png",
+          "href": "/explore/details/wisdom-poetry"
+        },
+        {
+          "title": "Acoustical Engineering",
+          "image": "/assets/images/blog/acoustics.png",
+          "href": "/explore/details/acoustical-engineering"
+        },
+        {
+          "title": "Symbolic Expression",
+          "image": "/assets/images/blog/symbolic.png",
+          "href": "/explore/details/symbolic-expression"
+        }
       ]
     }
   ],

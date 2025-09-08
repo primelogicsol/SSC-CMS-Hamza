@@ -57,21 +57,53 @@
     {
       "type": "featureList",
       "items": [
-        { "text": "Activating Higher Sensory Awareness for Growth"  },
-        { "text": " Developing Inner Perception & Metaphysical Senses"  },
-        { "text": "Physical Sensory Experience with Spiritual Dimensions" },
-        { "text": " Enhancing the Understanding of Sufi Mystical Phenomena"}
+        {
+          "text": "Activating Higher Sensory Awareness for Growth"
+        },
+        {
+          "text": " Developing Inner Perception & Metaphysical Senses"
+        },
+        {
+          "text": "Physical Sensory Experience with Spiritual Dimensions"
+        },
+        {
+          "text": " Enhancing the Understanding of Sufi Mystical Phenomena"
+        }
       ]
     },
     {
       "type": "cardGrid",
       "cards": [
-        { "title": "Subtle Development", "image": "/assets/images/blog/subtle.png", "href": "/details" },
-        { "title": "Inner Sight", "image": "/assets/images/blog/sight.png", "href": "/details" },
-        { "title": "Spiritual Hearing", "image": "/assets/images/blog/hearing.png", "href": "/details" },
-        { "title": "Divine Taste", "image": "/assets/images/blog/taste.png", "href": "/details" },
-        { "title": "Sacred Touch", "image": "/assets/images/blog/touch.png", "href": "/details" },
-        { "title": "Transcendent Smell", "image": "/assets/images/blog/smell.png", "href": "/details" }
+        {
+          "title": "Subtle Development",
+          "image": "/assets/images/blog/subtle.png",
+          "href": "/explore/details/subtle-development"
+        },
+        {
+          "title": "Inner Sight",
+          "image": "/assets/images/blog/sight.png",
+          "href": "/explore/details/inner-sight"
+        },
+        {
+          "title": "Spiritual Hearing",
+          "image": "/assets/images/blog/hearing.png",
+          "href": "/explore/details/spiritual-hearing"
+        },
+        {
+          "title": "Divine Taste",
+          "image": "/assets/images/blog/taste.png",
+          "href": "/explore/details/divine-taste"
+        },
+        {
+          "title": "Sacred Touch",
+          "image": "/assets/images/blog/touch.png",
+          "href": "/explore/details/sacred-touch"
+        },
+        {
+          "title": "Transcendent Smell",
+          "image": "/assets/images/blog/smell.png",
+          "href": "/explore/details/transcendent-smell"
+        }
       ]
     }
   ],
