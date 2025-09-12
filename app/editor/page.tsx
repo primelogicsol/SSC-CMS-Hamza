@@ -55,7 +55,21 @@ type Block =
   | { type: "keyConcepts"; concepts: string[] }
   | { type: "practicalApplications"; applications: string[] }
   | { type: "forNewStudents"; content: string }
-  | { type: "forMaturePractitioners"; content: string };
+  | { type: "forMaturePractitioners"; content: string }
+  // Academy Details specific block types
+  | {
+      type: "heroSection";
+      title: string;
+      subtitle?: string;
+      description?: string;
+      image?: string;
+    }
+  | { type: "section"; title: string; content: string }
+  | { type: "conclusion"; title: string; content: string }
+  | { type: "finalQuote"; title: string; content: string }
+  | { type: "profileCard"; professionalProfile: any; areasOfFocus: any }
+  | { type: "introduction"; content: string }
+  | { type: "interviewSection"; title: string; [key: string]: any };
 
 type ContentItem = {
   id?: string;
@@ -184,6 +198,63 @@ const defaultBlockFor = (type: Block["type"]): Block => {
     return {
       type: "forMaturePractitioners",
       content: "<p>Content for mature practitioners</p>",
+    } as Block;
+  // Academy Details specific block types
+  if (type === "heroSection")
+    return {
+      type: "heroSection",
+      title: "Hero Section Title",
+      subtitle: "Hero Section Subtitle",
+      description: "Hero section description",
+      image: "/assets/images/placeholder.png",
+    } as Block;
+  if (type === "section")
+    return {
+      type: "section",
+      title: "Section Title",
+      content: "<p>Section content</p>",
+    } as Block;
+  if (type === "conclusion")
+    return {
+      type: "conclusion",
+      title: "Conclusion Title",
+      content: "<p>Conclusion content</p>",
+    } as Block;
+  if (type === "finalQuote")
+    return {
+      type: "finalQuote",
+      title: "Final Quote Title",
+      content: "<p>Final quote content</p>",
+    } as Block;
+  if (type === "profileCard")
+    return {
+      type: "profileCard",
+      professionalProfile: {},
+      areasOfFocus: {},
+    } as Block;
+  if (type === "introduction")
+    return {
+      type: "introduction",
+      content: "<p>Introduction content</p>",
+    } as Block;
+  if (type === "interviewSection")
+    return {
+      type: "interviewSection",
+      title: "Interview Section Title",
+      content: "",
+      additionalContent: "",
+      question: "",
+      answer: "",
+      highlightedQuote: "",
+      additionalAnswer: "",
+      secondQuestion: "",
+      secondAnswer: "",
+      secondAdditionalAnswer: "",
+      finalAnswer: "",
+      finalQuote: "",
+      conclusion: "",
+      keyInsight: "",
+      revelation: "",
     } as Block;
   return { type: "richText", content: "<p>New block</p>" } as Block;
 };
@@ -425,6 +496,19 @@ export default function Editor() {
         "practicalApplications",
         "forNewStudents",
         "forMaturePractitioners",
+      ];
+    }
+
+    if (section === "academy-details") {
+      return [
+        "heroSection",
+        "section",
+        "richText",
+        "conclusion",
+        "finalQuote",
+        "profileCard",
+        "introduction",
+        "interviewSection",
       ];
     }
 
@@ -1746,6 +1830,400 @@ export default function Editor() {
                         })
                       }
                     />
+                  </div>
+                )}
+
+                {/* Academy Details specific block editors */}
+                {block.type === "heroSection" && (
+                  <div className="space-y-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      <input
+                        className="border px-2 py-1 rounded"
+                        placeholder="Title"
+                        value={block.title}
+                        onChange={(e) =>
+                          updateBlockAt(idx, {
+                            ...block,
+                            title: e.target.value,
+                          })
+                        }
+                      />
+                      <input
+                        className="border px-2 py-1 rounded"
+                        placeholder="Subtitle"
+                        value={block.subtitle || ""}
+                        onChange={(e) =>
+                          updateBlockAt(idx, {
+                            ...block,
+                            subtitle: e.target.value,
+                          })
+                        }
+                      />
+                      <input
+                        className="border px-2 py-1 rounded"
+                        placeholder="Image URL"
+                        value={block.image || ""}
+                        onChange={(e) =>
+                          updateBlockAt(idx, {
+                            ...block,
+                            image: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[80px]"
+                      placeholder="Description"
+                      value={block.description || ""}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          description: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
+
+                {block.type === "section" && (
+                  <div className="space-y-2">
+                    <input
+                      className="w-full border px-2 py-1 rounded"
+                      placeholder="Section Title"
+                      value={block.title}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          title: e.target.value,
+                        })
+                      }
+                    />
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[120px]"
+                      placeholder="Section content (HTML)"
+                      value={block.content}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
+
+                {block.type === "conclusion" && (
+                  <div className="space-y-2">
+                    <input
+                      className="w-full border px-2 py-1 rounded"
+                      placeholder="Conclusion Title"
+                      value={block.title}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          title: e.target.value,
+                        })
+                      }
+                    />
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[120px]"
+                      placeholder="Conclusion content (HTML)"
+                      value={block.content}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
+
+                {block.type === "finalQuote" && (
+                  <div className="space-y-2">
+                    <input
+                      className="w-full border px-2 py-1 rounded"
+                      placeholder="Final Quote Title"
+                      value={block.title}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          title: e.target.value,
+                        })
+                      }
+                    />
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[120px]"
+                      placeholder="Final quote content (HTML)"
+                      value={block.content}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
+
+                {block.type === "profileCard" && (
+                  <div className="space-y-2">
+                    <div className="text-sm text-gray-600">
+                      Profile Card - Professional Profile and Areas of Focus
+                    </div>
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[100px]"
+                      placeholder="Professional Profile (JSON)"
+                      value={JSON.stringify(block.professionalProfile, null, 2)}
+                      onChange={(e) => {
+                        try {
+                          const parsed = JSON.parse(e.target.value);
+                          updateBlockAt(idx, {
+                            ...block,
+                            professionalProfile: parsed,
+                          });
+                        } catch {
+                          // Invalid JSON, don't update
+                        }
+                      }}
+                    />
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[100px]"
+                      placeholder="Areas of Focus (JSON)"
+                      value={JSON.stringify(block.areasOfFocus, null, 2)}
+                      onChange={(e) => {
+                        try {
+                          const parsed = JSON.parse(e.target.value);
+                          updateBlockAt(idx, {
+                            ...block,
+                            areasOfFocus: parsed,
+                          });
+                        } catch {
+                          // Invalid JSON, don't update
+                        }
+                      }}
+                    />
+                  </div>
+                )}
+
+                {block.type === "introduction" && (
+                  <div className="space-y-2">
+                    <textarea
+                      className="w-full border p-2 rounded min-h-[120px]"
+                      placeholder="Introduction content (HTML)"
+                      value={block.content}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          content: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                )}
+
+                {block.type === "interviewSection" && (
+                  <div className="space-y-4">
+                    <input
+                      className="w-full border px-2 py-1 rounded"
+                      placeholder="Interview Section Title"
+                      value={block.title}
+                      onChange={(e) =>
+                        updateBlockAt(idx, {
+                          ...block,
+                          title: e.target.value,
+                        })
+                      }
+                    />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <textarea
+                        className="border px-2 py-1 rounded min-h-[100px]"
+                        placeholder="Content"
+                        value={block.content || ""}
+                        onChange={(e) =>
+                          updateBlockAt(idx, {
+                            ...block,
+                            content: e.target.value,
+                          })
+                        }
+                      />
+                      <textarea
+                        className="border px-2 py-1 rounded min-h-[100px]"
+                        placeholder="Additional Content"
+                        value={block.additionalContent || ""}
+                        onChange={(e) =>
+                          updateBlockAt(idx, {
+                            ...block,
+                            additionalContent: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+
+                    <div className="space-y-3">
+                      <div className="bg-gray-50 p-3 rounded">
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Question
+                        </label>
+                        <textarea
+                          className="w-full border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Interview Question"
+                          value={block.question || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              question: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+
+                      <div className="bg-gray-50 p-3 rounded">
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Answer
+                        </label>
+                        <textarea
+                          className="w-full border px-2 py-1 rounded min-h-[100px]"
+                          placeholder="Interview Answer"
+                          value={block.answer || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              answer: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Highlighted Quote"
+                          value={block.highlightedQuote || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              highlightedQuote: e.target.value,
+                            })
+                          }
+                        />
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Additional Answer"
+                          value={block.additionalAnswer || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              additionalAnswer: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+
+                      <div className="bg-gray-50 p-3 rounded">
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Second Question
+                        </label>
+                        <textarea
+                          className="w-full border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Second Interview Question"
+                          value={block.secondQuestion || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              secondQuestion: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Second Answer"
+                          value={block.secondAnswer || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              secondAnswer: e.target.value,
+                            })
+                          }
+                        />
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Second Additional Answer"
+                          value={block.secondAdditionalAnswer || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              secondAdditionalAnswer: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Final Answer"
+                          value={block.finalAnswer || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              finalAnswer: e.target.value,
+                            })
+                          }
+                        />
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Final Quote"
+                          value={block.finalQuote || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              finalQuote: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Conclusion"
+                          value={block.conclusion || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              conclusion: e.target.value,
+                            })
+                          }
+                        />
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Key Insight"
+                          value={block.keyInsight || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              keyInsight: e.target.value,
+                            })
+                          }
+                        />
+                        <textarea
+                          className="border px-2 py-1 rounded min-h-[80px]"
+                          placeholder="Revelation"
+                          value={block.revelation || ""}
+                          onChange={(e) =>
+                            updateBlockAt(idx, {
+                              ...block,
+                              revelation: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
