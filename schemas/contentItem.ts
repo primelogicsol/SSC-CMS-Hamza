@@ -57,9 +57,10 @@ export type ContentBlock =
 
 export type ContentItem = {
   id: string;
-  section: "explorer" | "academy" | "explorer-details";
+  section: "explorer" | "academy" | "explorer-details" | "academy-details";
   slug: string;
   title: string;
+  category?: string;
   subtitle?: string;
   parentPage?: string;
   cardTitle?: string;

@@ -6,9 +6,10 @@ import axios from "axios";
 
 const ContentItemSchema = z.object({
   id: z.string(),
-  section: z.enum(["explorer", "academy"]),
+  section: z.enum(["explorer", "academy", "explorer-details", "academy-details"]),
   slug: z.string(),
   title: z.string(),
+  category: z.string().optional(),
   subtitle: z.string().optional(),
   heroImage: z.string().url().optional(),
   seo: z
